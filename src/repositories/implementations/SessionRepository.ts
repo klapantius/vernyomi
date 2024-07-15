@@ -1,6 +1,6 @@
-import { IDatabase } from '../../database/IDatabase'; // Import the correct type 'IDatabase'
+import { DatabaseWriteOperationResult, IDatabase } from '../../database/IDatabase'; // Import the correct type 'IDatabase'
 import { Session } from '../../models/Session'; // Import the correct type 'Session'
-import { injectable, inject } from "inversify";
+import { injectable } from "inversify";
 
 @injectable()
 export class SessionRepository {
@@ -10,8 +10,7 @@ export class SessionRepository {
         this.db = db;
     }
 
-    async save(session: Session): Promise<Session> {
-        throw new Error('Not implemented yet'); // Implement this method
-        // Use this.db.query(...) to interact with the database
+    async save(session: Session): Promise<DatabaseWriteOperationResult> {
+        return await this.db.query('INSERT INTO sessions (timestamp) VALUES (?)', [session.startedAt]);
     }
 }
