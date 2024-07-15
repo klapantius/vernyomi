@@ -1,9 +1,9 @@
 export class Session {
-    session_id: number | null; // null when not yet saved to DB
-    started_at: Date;
+    sessionId: number | null; // null when not yet saved to DB
+    startedAt: Date;
 
-    constructor(session_id: number | null, started_at: Date) {
-        this.session_id = session_id;
-        this.started_at = started_at;
+    constructor(sessionId: number | null, startedAt: Date) {
+        this.sessionId = sessionId;
+        this.startedAt = startedAt;
     }
 }
