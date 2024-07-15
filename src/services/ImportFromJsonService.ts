@@ -9,7 +9,7 @@ interface BloodPressureEntry {
 	comment?: string;
 }
 
-export class GroupedBloodPressureLog {
+export class ImportFromJsonService {
     public entries: BloodPressureEntry[] = [];
     private timeSpan: number; // Time span in minutes
 

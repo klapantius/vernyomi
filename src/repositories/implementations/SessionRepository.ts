@@ -1,7 +1,9 @@
 import { IDatabase } from '../../database/IDatabase'; // Import the correct type 'IDatabase'
 import { Session } from '../../models/Session'; // Import the correct type 'Session'
+import { injectable, inject } from "inversify";
 
-class SessionRepository {
+@injectable()
+export class SessionRepository {
     private db: IDatabase;
 
     constructor(db: IDatabase) {

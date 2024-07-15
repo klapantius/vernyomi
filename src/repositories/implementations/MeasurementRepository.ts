@@ -1,6 +1,8 @@
 import { IDatabase } from '../../database/IDatabase';
 import { Measurement } from '../../models/Measurement';
+import { injectable, inject } from "inversify";
 
+@injectable()
 export class MeasurementRepository {
     private db: IDatabase;
 
