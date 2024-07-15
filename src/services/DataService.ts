@@ -17,6 +17,7 @@ class DataService {
     }
 
     async saveMeasurement(measurement: Measurement): Promise<Measurement> {
+        if (measurement.sessionId == null) { throw new Error('Session ID is required for every Measurment.'); }
         return this.measurementRepository.save(measurement);
     }
 }
