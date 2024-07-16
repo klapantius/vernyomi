@@ -2,6 +2,7 @@ import { ISessionRepository } from '../repositories/interfaces/ISessionRepositor
 import { IMeasurementRepository } from '../repositories/interfaces/IMeasurementRepository';
 import { Session } from '../models/Session';
 import { Measurement } from '../models/Measurement';
+import { DatabaseWriteOperationResult } from '../database/IDatabase';
 
 class DataService {
     private sessionRepository: ISessionRepository;
@@ -12,7 +13,7 @@ class DataService {
         this.measurementRepository = measurementRepo;
     }
 
-    async saveSession(session: Session): Promise<Session> {
+    async saveSession(session: Session): Promise<DatabaseWriteOperationResult> {
         return this.sessionRepository.save(session);
     }
 

@@ -1,22 +1,14 @@
+import fs from 'fs';
 import { myContainer } from '../inversify.config';
 import { Session } from '../models/Session';
 import { ISessionRepository } from '../repositories/interfaces/ISessionRepository';
 import { Measurement } from '../models/Measurement';
 import { IMeasurementRepository } from '../repositories/interfaces/IMeasurementRepository';
-import fs from 'fs';
-
-export interface BloodPressureEntry {
-    date: string; // Assuming format YYYY-MM-DD
-    time: string; // Assuming format HH:MM
-    sys: number;
-    dia: number;
-    puls: number;
-    comment?: string;
-}
+import { BackupEntry } from '../models/BackupEntry';
 
 export class ImportFromJsonService {
-    public entries: BloodPressureEntry[] = [];
-    private grouppedEntries!: BloodPressureEntry[][];
+    public entries: BackupEntry[] = [];
+    private grouppedEntries!: BackupEntry[][];
     private sessionAutoTimeSpan: number; // Time span in minutes to guess which measurments belong to the same session
 
     constructor(private filePath: string, timeSpan: number) {
@@ -27,23 +19,23 @@ export class ImportFromJsonService {
         try {
             const data = await fs.promises.readFile(this.filePath, 'utf8');
             const json = JSON.parse(data);
-            this.entries = json.entries as BloodPressureEntry[];
+            this.entries = json.entries as BackupEntry[];
         } catch (error) {
             console.error(`Failed to load entries from ${this.filePath}:`, error);
         }
     }
 
-    private entryToTimestamp(entry: BloodPressureEntry): number {
+    private entryToTimestamp(entry: BackupEntry): number {
         const [year, month, day] = entry.date.split('.').map(Number);
         const [hour, minute] = entry.time.split(':').map(Number);
         return new Date(year, month - 1, day, hour, minute).getTime();
     }
 
-    async loadAndGroupAsync(): Promise<BloodPressureEntry[][]> {
+    async loadAndGroupAsync(): Promise<BackupEntry[][]> {
         await this.loadAsync(); // Ensure entries are loaded
         const sortedEntries = this.entries.sort((a, b) => this.entryToTimestamp(a) - this.entryToTimestamp(b));
         this.grouppedEntries = [];
-        let currentGroup: BloodPressureEntry[] = [];
+        let currentGroup: BackupEntry[] = [];
 
         sortedEntries.forEach((entry, index) => {
             if (index === 0) {
@@ -76,14 +68,14 @@ export class ImportFromJsonService {
         }));
     }
 
-    async saveEntryWithSessionId(entry: BloodPressureEntry, sessionId: number | null): Promise<any> {
-        const createdAt = new Date(entry.date);
+    async saveEntryWithSessionId(entry: BackupEntry, sessionId: number | null): Promise<any> {
+        const createdAt = new Date(`${entry.date}T${entry.time}:00Z`);
         const measurement: Measurement = new Measurement(null, sessionId, createdAt, entry.sys, entry.dia, entry.puls); //, entry.comment);
         const repository = myContainer.get<IMeasurementRepository>('MeasurementRepository');
         await repository.save(measurement);
     }
 
-    async saveGroupAsSession(group: BloodPressureEntry[]) {
+    async saveGroupAsSession(group: BackupEntry[]) {
         // just create a session with the first entry's timestamp
         const sessionTimestamp = this.entryToTimestamp(group[0]);
         const session = new Session(null, new Date(sessionTimestamp));

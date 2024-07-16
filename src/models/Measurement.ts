@@ -4,7 +4,7 @@ export class Measurement {
     createdAt: Date;
     sys: number;
     dia: number;
-    pulse: number;
+    puls: number;
 
     constructor(measurementId: number | null, sessionId: number | null, createdAt: Date, sys: number, dia: number, pulse: number) {
         this.measurementId = measurementId;
@@ -12,6 +12,6 @@ export class Measurement {
         this.createdAt = createdAt;
         this.sys = sys;
         this.dia = dia;
-        this.pulse = pulse;
+        this.puls = pulse;
     }
 }

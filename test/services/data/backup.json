@@ -1,0 +1,20 @@
+{
+    "entries": [
+        {
+            "date": "19.12.23",
+            "time": "13:20",
+            "sys": 156,
+            "dia": 84,
+            "puls": 62,
+            "comment": "kurz nach dem Mittagessen"
+        },
+        {
+            "date": "19.12.23",
+            "time": "19:05",
+            "sys": 143,
+            "dia": 82,
+            "puls": 56,
+            "comment": "halbe Stunde nach dem Abendessen"
+        }
+    }
+}

@@ -1,7 +1,7 @@
-import { BloodPressureEntry } from "./ImportFromJsonService";
+import { BackupEntry } from "../models/BackupEntry";
 
 export interface IImportFromJsonService {
     loadAsync(): Promise<void>;
-    loadAndGroupAsync(): Promise<BloodPressureEntry[][]>;
+    loadAndGroupAsync(): Promise<BackupEntry[][]>;
     saveToDatabase(): Promise<void>;
  }
