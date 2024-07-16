@@ -31,8 +31,8 @@ export class ImportFromJsonService {
         return new Date(year, month - 1, day, hour, minute).getTime();
     }
 
-    async loadAndGroupAsync(): Promise<BackupEntry[][]> {
-        await this.loadAsync(); // Ensure entries are loaded
+    async loadAndGroupAsync(forceLoad: Boolean = false): Promise<BackupEntry[][]> {
+        if (!this.entries || forceLoad) { await this.loadAsync(); } // Ensure entries are loaded
         const sortedEntries = this.entries.sort((a, b) => this.entryToTimestamp(a) - this.entryToTimestamp(b));
         this.grouppedEntries = [];
         let currentGroup: BackupEntry[] = [];
@@ -69,7 +69,7 @@ export class ImportFromJsonService {
     }
 
     async saveEntryWithSessionId(entry: BackupEntry, sessionId: number | null): Promise<any> {
-        const createdAt = new Date(`${entry.date}T${entry.time}:00Z`);
+        const createdAt = new Date(`${entry.date.replace(/\./g, '-')}T${entry.time}:00.000Z`);
         const measurement: Measurement = new Measurement(null, sessionId, createdAt, entry.sys, entry.dia, entry.puls); //, entry.comment);
         const repository = myContainer.get<IMeasurementRepository>('MeasurementRepository');
         await repository.save(measurement);
