@@ -1,10 +1,10 @@
 import fs from 'fs';
 import { myContainer } from '../inversify.config';
-import { Session } from '../models/Session';
 import { ISessionRepository } from '../repositories/interfaces/ISessionRepository';
 import { Measurement } from '../models/Measurement';
 import { IMeasurementRepository } from '../repositories/interfaces/IMeasurementRepository';
 import { BackupEntry } from '../models/BackupEntry';
+import { SessionCreationSource } from '../models/SessionCreationSource';
 
 export class ImportFromJsonService {
     public entries: BackupEntry[] = [];
@@ -79,18 +79,14 @@ export class ImportFromJsonService {
             puls: entry.puls,
             // comment: entry.comment,
         });
-        const repository = myContainer.get<IMeasurementRepository>('MeasurementRepository');
+        const repository = myContainer.get<IMeasurementRepository>('IMeasurementRepository');
         await repository.save(measurement);
     }
 
     async saveGroupAsSession(group: BackupEntry[]) {
-        // just create a session with the first entry's timestamp
-        const sessionTimestamp = this.entryToTimestamp(group[0]);
-        const session = new Session(null, new Date(sessionTimestamp));
-        // save the session to the database and return the sessionId
-        const repository = myContainer.get<ISessionRepository>('SessionRepository');
-        await repository.save(session);
-        return session.sessionId;
+        const repository = myContainer.get<ISessionRepository>('ISessionRepository');
+        const sessionId = await repository.createSessionAsync(SessionCreationSource.ImportFromBackup);
+        return sessionId;
     }
 
 }    

@@ -1,5 +1,6 @@
 import { myContainer } from '../inversify.config';
 import { Measurement } from '../models/Measurement';
+import { SessionCreationSource } from '../models/SessionCreationSource';
 import { IMeasurementRepository } from '../repositories/interfaces/IMeasurementRepository';
 import { ISessionRepository } from '../repositories/interfaces/ISessionRepository';
 
@@ -10,13 +11,13 @@ export class SessionService {
         this.sessionRepository = myContainer.get<ISessionRepository>('ISessionRepository');
     }
 
-    public async createSessionAsync(): Promise<number> {
-        const result = await this.sessionRepository.createSessionAsync();
+    public async createSessionAsync(creationSource: SessionCreationSource): Promise<number> {
+        const result = await this.sessionRepository.createSessionAsync(creationSource);
         return result;
     }
 }
 
-export class MeasurementService {
+export class MeasurementService { // TODO: this doesn't belong here
     measurementRepository: IMeasurementRepository;
 
     constructor() {

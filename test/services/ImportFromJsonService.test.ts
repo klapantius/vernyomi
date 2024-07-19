@@ -1,21 +1,32 @@
 import { ImportFromJsonService } from '../../src/services/ImportFromJsonService';
 import { BackupEntry } from '../../src/models/BackupEntry';
 import { IMeasurementRepository } from '../../src/repositories/interfaces/IMeasurementRepository';
+import { ISessionRepository } from '../../src/repositories/interfaces/ISessionRepository';
 import { myContainer } from '../../src/inversify.config';
 import fs from 'fs'; // Add this line to import the 'fs' module
+import { SessionCreationSource } from '../../src/models/SessionCreationSource';
 
 describe('ImportFromJsonService', () => {
     let service: ImportFromJsonService;
+    let mockSessionRepository: Partial<ISessionRepository>;
     let mockMeasurementRepository: Partial<IMeasurementRepository>;
+    let sessionIdTestCounter = 0;
 
     beforeEach(() => {
+        mockSessionRepository = {
+            createSessionAsync: jest.fn(() => {
+                return new Promise((resolve, reject) => {
+                    resolve(++sessionIdTestCounter);
+                });
+            })
+        };
         mockMeasurementRepository = {
             save: jest.fn().mockResolvedValue(undefined)
         };
-        if (myContainer.isBound('MeasurementRepository')) {
-            myContainer.unbind('MeasurementRepository');
-        }
-        myContainer.bind<IMeasurementRepository>('MeasurementRepository').toConstantValue(mockMeasurementRepository as IMeasurementRepository);
+        myContainer.unbind('IMeasurementRepository');
+        myContainer.bind<IMeasurementRepository>('IMeasurementRepository').toConstantValue(mockMeasurementRepository as IMeasurementRepository);
+        myContainer.unbind('ISessionRepository');
+        myContainer.bind<ISessionRepository>('ISessionRepository').toConstantValue(mockSessionRepository as ISessionRepository);
         service = new ImportFromJsonService('../../test/data/backup.json', 5);
     });
 
@@ -93,20 +104,22 @@ describe('ImportFromJsonService', () => {
             ],
         ];
 
-        const saveGroupAsSessionMock = jest.spyOn(service, 'saveGroupAsSession');
+        // const saveGroupAsSessionMock = jest.spyOn(service, 'saveGroupAsSession');
         const saveEntryWithSessionIdMock = jest.spyOn(service, 'saveEntryWithSessionId');
 
-        let sessionIdTestCounter = 0;
-        saveGroupAsSessionMock.mockImplementation(async (group: BackupEntry[]) => {
-            // Mock implementation to return an increased sessionId after each call
-            return ++sessionIdTestCounter;
-        });
+        // let sessionIdTestCounter = 0;
+        // saveGroupAsSessionMock.mockImplementation(async (group: BackupEntry[]) => {
+        //     // Mock implementation to return an increased sessionId after each call
+        //     return ++sessionIdTestCounter;
+        // });
         saveEntryWithSessionIdMock.mockImplementation(async (entry: BackupEntry, sessionId: number | null) => {});
 
         (service as any).grouppedEntries = groupedEntries;
+        sessionIdTestCounter = 0;
         await service.saveToDatabase();
 
-        expect(saveGroupAsSessionMock).toHaveBeenCalledTimes(2);
+        // expect(saveGroupAsSessionMock).toHaveBeenCalledTimes(2);
+        expect(mockSessionRepository.createSessionAsync).toHaveBeenCalledWith(SessionCreationSource.ImportFromBackup);
         expect(saveEntryWithSessionIdMock).toHaveBeenCalledTimes(4);
         expect(saveEntryWithSessionIdMock).toHaveBeenCalledWith(
             { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70 },

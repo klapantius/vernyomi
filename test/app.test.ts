@@ -5,6 +5,7 @@ import { IDatabase } from '../src/database/IDatabase';
 import { ISessionRepository } from '../src/repositories/interfaces/ISessionRepository';
 import { IMeasurementRepository } from '../src/repositories/interfaces/IMeasurementRepository';
 import { Application } from '../src/app';
+import { SessionCreationSource } from '../src/models/SessionCreationSource';
 
 describe('Application', () => {
     let application: Application | null = null;
@@ -28,8 +29,7 @@ describe('Application', () => {
             query: jest.fn().mockResolvedValue([])
         };
         sessionRepository = {
-            createSessionAsync: jest.fn().mockResolvedValue(1),
-            save: jest.fn().mockResolvedValue(undefined)
+            createSessionAsync: jest.fn().mockResolvedValue(1)
         };
         measurementRepository = {
             save: jest.fn().mockResolvedValue(undefined)
@@ -62,7 +62,9 @@ describe('Application', () => {
             sessionId: 1,
             message: 'Session started successfully'
         });
-        expect(sessionRepository.createSessionAsync).toHaveBeenCalled();
+        expect(sessionRepository.createSessionAsync).toHaveBeenCalledWith(
+            SessionCreationSource.InputFromUI
+        );
 
         const saveMeasurementResponse = await request(app).post('/save-measurement').send({
             sessionId: 42,

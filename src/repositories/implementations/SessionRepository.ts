@@ -1,5 +1,5 @@
-import { DatabaseWriteOperationResult, IDatabase } from '../../database/IDatabase'; // Import the correct type 'IDatabase'
-import { Session } from '../../models/Session'; // Import the correct type 'Session'
+import { IDatabase } from '../../database/IDatabase'; // Import the correct type 'IDatabase'
+import { SessionCreationSource } from '../../models/SessionCreationSource';
 import { ISessionRepository } from '../interfaces/ISessionRepository';
 import { injectable } from "inversify";
 
@@ -11,12 +11,9 @@ export class SessionRepository implements ISessionRepository {
         this.db = db;
     }
 
-    public async createSessionAsync(): Promise<number> {
-        const dbResult = await this.db.query('INSERT INTO sessions (timestamp) VALUES (?)', [new Date()]);
+    public async createSessionAsync(creationSource: SessionCreationSource): Promise<number> {
+        const dbResult = await this.db.query('INSERT INTO sessions (timestamp, creationSource) VALUES (?)',
+            [new Date(), creationSource]);
         return dbResult.insertId;
-    }
-    
-    async save(session: Session): Promise<DatabaseWriteOperationResult> {
-        return await this.db.query('INSERT INTO sessions (timestamp) VALUES (?)', [session.startedAt]);
     }
 }

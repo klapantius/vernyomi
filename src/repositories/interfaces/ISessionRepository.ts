@@ -1,7 +1,5 @@
-import { DatabaseWriteOperationResult } from '../../database/IDatabase';
-import { Session } from '../../models/Session';
+import { SessionCreationSource } from '../../models/SessionCreationSource';
 
 export interface ISessionRepository {
-    createSessionAsync(): Promise<number>;
-    save(session: Session): Promise<DatabaseWriteOperationResult>;
+    createSessionAsync(creationSource: SessionCreationSource): Promise<number>;
 }

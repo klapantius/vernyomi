@@ -7,6 +7,7 @@ import { ISessionRepository } from './repositories/interfaces/ISessionRepository
 import { IMeasurementRepository } from './repositories/interfaces/IMeasurementRepository';
 import { ImportFromJsonService } from "./services/ImportFromJsonService";
 import { MeasurementService } from './services/MeasurementService';
+import { SessionCreationSource } from './models/SessionCreationSource';
 
 export class Application {
     database: IDatabase;
@@ -29,7 +30,7 @@ export class Application {
         this.app.post('/start-session', async (_, res) => {
             const repo = myContainer.get<ISessionRepository>('ISessionRepository');
             res.json({
-                sessionId: await repo.createSessionAsync(),
+                sessionId: await repo.createSessionAsync(SessionCreationSource.InputFromUI),
                 message: 'Session started successfully'
             });
         });
