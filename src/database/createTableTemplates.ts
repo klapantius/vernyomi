@@ -11,7 +11,7 @@ export class CreateTableTemplates {
         created_at timestamp default current_timestamp,
         sys int,
         dia int,
-        pulse int,
+        puls int,
         primary key(measurement_id, session_id),
         foreign key(session_id)
             references sessions(session_id)

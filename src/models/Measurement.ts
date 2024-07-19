@@ -1,33 +1,31 @@
 export class Measurement {
     measurementId: number | null; // null when not yet saved to DB
-    sessionId: number | null;
+    sessionId: number;
     createdAt: Date;
     sys: number;
     dia: number;
     puls: number;
 
-    constructor({ measurementId, sessionId, createdAt, sys, dia, pulse }: { 
-        measurementId: number | null, 
-        sessionId: number | null,
-        createdAt: Date | null, 
+    constructor({ measurementId, sessionId, createdAt, sys, dia, puls }: { 
+        measurementId?: number | null, 
+        sessionId?: number | null | undefined,
+        createdAt?: Date, 
         sys: number, 
         dia: number, 
-        pulse: number 
-    }) {
+        puls: number 
+    } = { sys: 0, dia: 0, puls: 0 }) {
         if (sessionId === null) {
             throw new Error("sessionId must not be null");
         }
-        if (sessionId <= 0) {
-            throw new Error(`invalid sessionId ${sessionId}`);
+        if ((sessionId ?? 0) <= 0) {
+            throw new Error(`invalid sessionId: ${sessionId}`);
         }
-        if (createdAt === null) {
-            createdAt = new Date();
-        }
+        if (measurementId === undefined) { measurementId = null; }
         this.measurementId = measurementId;
-        this.sessionId = sessionId;
-        this.createdAt = createdAt;
+        this.sessionId = sessionId ?? 0; // fallback to 0 should never happen because of the sanity checks above
+        this.createdAt = createdAt ?? new Date();
         this.sys = sys;
         this.dia = dia;
-        this.puls = pulse;
+        this.puls = puls;
     }
 }

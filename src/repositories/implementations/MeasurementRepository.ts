@@ -1,6 +1,6 @@
 import { IDatabase } from '../../database/IDatabase';
 import { Measurement } from '../../models/Measurement';
-import { injectable, inject } from "inversify";
+import { injectable } from "inversify";
 
 @injectable()
 export class MeasurementRepository {
@@ -10,8 +10,8 @@ export class MeasurementRepository {
         this.db = db;
     }
 
-    async save(measurement: Measurement): Promise<Measurement> {
-        throw new Error('Not implemented yet'); // Implement this method
-        // Use this.db.query(...) to interact with the database
+    async save(measurement: Measurement): Promise<number> {
+        const dbResult = await this.db.query('INSERT INTO measurements (sessionId, sys, dia, puls) VALUES (?, ?, ?, ?)', [measurement.sessionId, measurement.sys, measurement.dia, measurement.puls]);
+        return dbResult.insertId;
     }
 }

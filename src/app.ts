@@ -1,23 +1,44 @@
 import express from 'express';
 import { myContainer } from "./inversify.config";
 import { IDatabase } from "./database/IDatabase";
+import { ISessionRepository } from './repositories/interfaces/ISessionRepository';
+import { IMeasurementRepository } from './repositories/interfaces/IMeasurementRepository';
 import { ImportFromJsonService } from "./services/ImportFromJsonService";
+import { MeasurementService } from './services/MeasurementService';
 
-class Application {
+export class Application {
     database: IDatabase;
     app: express.Application;
 
     constructor() {
-        this.database = myContainer.get<IDatabase>('IDatabase');    
+        this.database = myContainer.get<IDatabase>('IDatabase');
         this.app = express();
     }
 
-    private setupServer(): void {
+    public setupServer(): void {
+        this.app.use(express.json());
+        
+        this.app.use(express.static('public'));
         this.app.get('/', (_, res) => {
-            res.send('Hello World!');
+            res.sendFile('index.html', { root: 'public' });
         });
 
-        // Define more routes here
+        this.app.post('/start-session', async (_, res) => {
+            const repo = myContainer.get<ISessionRepository>('ISessionRepository');
+            res.json({
+                sessionId: await repo.createSessionAsync(),
+                message: 'Session started successfully'
+            });
+        });
+
+        this.app.post('/save-measurement', async (req, res) => {
+            const repo = myContainer.get<IMeasurementRepository>('IMeasurementRepository');
+            const measurementService = new MeasurementService(repo);
+            await measurementService.saveMeasurement(req.body);
+            res.json({
+                message: 'Measurement saved successfully'
+            });
+        });
 
         const port = 3000;
         this.app.listen(port, () => {
@@ -35,13 +56,6 @@ class Application {
         console.log(`Loaded ${backupLoader.entries.length} measurements of ${grouppedEntries.length} sessions from backup file.`);
 
         // start the web server for the page and API
-        this.setupServer();        
+        this.setupServer();
     }
 }
-
-new Application()
-    .runAsync()
-    .then(_ => {
-        console.log('done');
-        process.exit();
-    });

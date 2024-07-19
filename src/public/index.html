@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>vérnyomi</title>
+</head>
+
+<body>
+    <button id="start-session" onclick="startSession()">start</button>
+    <div id="measurements">
+        <input type="number" id="sys" placeholder="Sys">
+        <input type="number" id="dia" placeholder="Dia">
+        <input type="number" id="puls" placeholder="puls">
+        <input type="text" id="comment" placeholder="Comment">
+        <button id="save-measurment" onclick="saveMeasurement()">next</button>
+    </div>
+
+    <script>
+        function startSession() {
+            fetch('/start-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({})
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.getElementById('start-session').disabled = true;
+                    localStorage.setItem('sessionId', data.sessionId);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+        function saveMeasurement() {
+            fetch('/save-measurement', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    sessionId: localStorage.getItem('sessionId'),
+                    sys: document.getElementById('sys').value,
+                    dia: document.getElementById('dia').value,
+                    puls: document.getElementById('puls').value,
+                    comment: document.getElementById('comment').value
+                })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    document.getElementById('sys').value = '';
+                    document.getElementById('dia').value = '';
+                    document.getElementById('puls').value = '';
+                    document.getElementById('comment').value = '';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>

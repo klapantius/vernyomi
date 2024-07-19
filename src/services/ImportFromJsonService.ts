@@ -70,7 +70,15 @@ export class ImportFromJsonService {
 
     async saveEntryWithSessionId(entry: BackupEntry, sessionId: number | null): Promise<any> {
         const createdAt = new Date(`${entry.date.replace(/\./g, '-')}T${entry.time}:00.000Z`);
-        const measurement: Measurement = new Measurement(null, sessionId, createdAt, entry.sys, entry.dia, entry.puls); //, entry.comment);
+        const measurement: Measurement = new Measurement({
+            sessionId: sessionId,
+            measurementId: null,
+            createdAt: createdAt,
+            sys: entry.sys,
+            dia: entry.dia,
+            puls: entry.puls,
+            // comment: entry.comment,
+        });
         const repository = myContainer.get<IMeasurementRepository>('MeasurementRepository');
         await repository.save(measurement);
     }
