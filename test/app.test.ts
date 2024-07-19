@@ -7,12 +7,13 @@ import { IMeasurementRepository } from '../src/repositories/interfaces/IMeasurem
 import { Application } from '../src/app';
 
 describe('Application', () => {
+    let application: Application | null = null;
     let app: express.Application;
     let database: IDatabase;
     let sessionRepository: ISessionRepository;
     let measurementRepository: IMeasurementRepository;
 
-    beforeEach(() => {
+    beforeEach(async () => {
         if (process.env.JEST_DEBUG) {
             // Jest is running in a debugger
             jest.setTimeout(100000); // Set a higher timeout
@@ -20,6 +21,7 @@ describe('Application', () => {
             // Jest is not running in a debugger
             jest.setTimeout(5000); // Set a standard timeout
         }
+        await new Promise(resolve => setTimeout(resolve, 1000));
         app = express();
         database = {
             warmup: jest.fn().mockResolvedValue(undefined),
@@ -40,8 +42,17 @@ describe('Application', () => {
         myContainer.bind<IMeasurementRepository>('IMeasurementRepository').toConstantValue(measurementRepository);
     });
 
+    afterAll(async () => {
+        // Ensure the server is properly shutdown
+        if (application != null) {
+            application.shutdownServer();
+            // wait until the next event loop cycle
+            await new Promise(resolve => setImmediate(resolve));
+        }
+    });
+
     it('should setup the server and handle routes correctly', async () => {
-        const application = new Application();
+        application = new Application();
         application.app = app;
         application.setupServer();
 

@@ -1,4 +1,6 @@
 import express from 'express';
+import { Socket } from 'net';
+import { Server } from 'http';
 import { myContainer } from "./inversify.config";
 import { IDatabase } from "./database/IDatabase";
 import { ISessionRepository } from './repositories/interfaces/ISessionRepository';
@@ -9,6 +11,7 @@ import { MeasurementService } from './services/MeasurementService';
 export class Application {
     database: IDatabase;
     app: express.Application;
+    private server: Server | null = null;
 
     constructor() {
         this.database = myContainer.get<IDatabase>('IDatabase');
@@ -17,7 +20,7 @@ export class Application {
 
     public setupServer(): void {
         this.app.use(express.json());
-        
+
         this.app.use(express.static('public'));
         this.app.get('/', (_, res) => {
             res.sendFile('index.html', { root: 'public' });
@@ -41,9 +44,51 @@ export class Application {
         });
 
         const port = 3000;
-        this.app.listen(port, () => {
+        this.server = this.app.listen(port, () => {
             console.log(`Server running on http://localhost:${port}`);
         });
+
+        // Keep track of active connections
+        const connections: NodeJS.Socket[] = [];
+        this.server.on('connection', (connection) => {
+            connections.push(connection);
+            connection.on('close', () => {
+                const index = connections.indexOf(connection);
+                if (index !== -1) {
+                    connections.splice(index, 1);
+                }
+            });
+        });
+
+        // Graceful shutdown function
+        const gracefulShutdown = () => {
+            console.log('Starting graceful shutdown...');
+
+            // Stop the server from accepting new connections
+            if (this.server) {
+                this.server.close(() => {
+                    console.log('Closed out remaining connections.');
+                    process.exit();
+                });
+            }
+            // Close existing connections
+            connections.forEach((conn) => conn.end());
+            setTimeout(() => connections.forEach((conn) => (conn as Socket).destroy()), 5000);
+
+            this.shutdownServer();
+        };
+
+        // Listen for shutdown signals
+        process.on('SIGTERM', gracefulShutdown);
+        process.on('SIGINT', gracefulShutdown);
+    }
+
+    public shutdownServer() {
+        if (this.server) {
+            this.server.close(() => {
+                console.log('Server shut down successfully');
+            });
+        }
     }
 
     public async runAsync() {
