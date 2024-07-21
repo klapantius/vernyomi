@@ -29,10 +29,12 @@ export class Application {
             res.sendFile('index.html', { root: process.cwd() + '/public' });
         });
 
-        this.app.post('/start-session', async (_, res) => {
+        this.app.post('/start-session', async (req, res) => {
             const repo = myContainer.get<ISessionRepository>(DITokens.SessionRepository);
             res.json({
-                sessionId: await repo.createSessionAsync(SessionCreationSource.InputFromUI),
+                sessionId: await repo.createSessionAsync(
+                    SessionCreationSource.InputFromUI,
+                    req.body.comment),
                 message: 'Session started successfully'
             });
         });
@@ -76,7 +78,7 @@ export class Application {
 
         // Stop the server from accepting new connections
         this.shutdownServer();
-        
+
         // Close existing connections
         if (this.connections?.length > 0) {
             this.connections.forEach((conn) => conn.end());
@@ -99,8 +101,8 @@ export class Application {
 
         // Listen for shutdown signals
         await new Promise((resolve) => {
-            process.on('SIGTERM', () => {this.gracefulShutdown(); resolve(true);});
-            process.on('SIGINT', () => {this.gracefulShutdown(); resolve(true);});
+            process.on('SIGTERM', () => { this.gracefulShutdown(); resolve(true); });
+            process.on('SIGINT', () => { this.gracefulShutdown(); resolve(true); });
         });
     }
 }
