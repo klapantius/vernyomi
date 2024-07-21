@@ -13,6 +13,7 @@ export class Application {
     database: IDatabase;
     app: express.Application;
     private server: Server | null = null;
+    private connections: NodeJS.Socket[] = [];
 
     constructor() {
         this.database = myContainer.get<IDatabase>('IDatabase');
@@ -50,38 +51,15 @@ export class Application {
         });
 
         // Keep track of active connections
-        const connections: NodeJS.Socket[] = [];
         this.server.on('connection', (connection) => {
-            connections.push(connection);
+            this.connections.push(connection);
             connection.on('close', () => {
-                const index = connections.indexOf(connection);
+                const index = this.connections.indexOf(connection);
                 if (index !== -1) {
-                    connections.splice(index, 1);
+                    this.connections.splice(index, 1);
                 }
             });
         });
-
-        // Graceful shutdown function
-        const gracefulShutdown = () => {
-            console.log('Starting graceful shutdown...');
-
-            // Stop the server from accepting new connections
-            if (this.server) {
-                this.server.close(() => {
-                    console.log('Closed out remaining connections.');
-                    process.exit();
-                });
-            }
-            // Close existing connections
-            connections.forEach((conn) => conn.end());
-            setTimeout(() => connections.forEach((conn) => (conn as Socket).destroy()), 5000);
-
-            this.shutdownServer();
-        };
-
-        // Listen for shutdown signals
-        process.on('SIGTERM', gracefulShutdown);
-        process.on('SIGINT', gracefulShutdown);
     }
 
     public shutdownServer() {
@@ -91,6 +69,20 @@ export class Application {
             });
         }
     }
+
+    private gracefulShutdown() {
+        console.log('Starting graceful shutdown...');
+
+        // Stop the server from accepting new connections
+        this.shutdownServer();
+        
+        // Close existing connections
+        if (this.connections?.length > 0) {
+            this.connections.forEach((conn) => conn.end());
+            setTimeout(() => this.connections.forEach((conn) => (conn as Socket).destroy()), 5000);
+        }
+
+    };
 
     public async runAsync() {
         // ensure the db tables are in place
@@ -103,5 +95,11 @@ export class Application {
 
         // start the web server for the page and API
         this.setupServer();
+
+        // Listen for shutdown signals
+        await new Promise((resolve) => {
+            process.on('SIGTERM', () => {this.gracefulShutdown(); resolve(true);});
+            process.on('SIGINT', () => {this.gracefulShutdown(); resolve(true);});
+        });
     }
 }
