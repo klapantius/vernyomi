@@ -9,7 +9,7 @@ export class MariaDBConnectionPool {
     public static getInstance(): Pool {
         if (!MariaDBConnectionPool.instance) {
             // load connection.cfg as alternative source of connection parameters
-            const connectionConfig = JSON.parse(fs.readFileSync('../connection.cfg', 'utf8'));
+            const connectionConfig = JSON.parse(fs.readFileSync('connection.cfg', 'utf8'));
             MariaDBConnectionPool.instance = createPool({
                 host: connectionConfig?.DB_HOST ?? process.env.DB_HOST,
                 user: connectionConfig?.DB_USER ?? process.env.DB_USER,
