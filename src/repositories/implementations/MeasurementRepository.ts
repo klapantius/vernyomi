@@ -1,4 +1,4 @@
-import { IDatabase } from '../../database/IDatabase';
+import { IDatabase } from '../../services/database/IDatabase';
 import { Measurement } from '../../models/Measurement';
 import { injectable, inject } from "inversify";
 import { DITokens } from "../../inversify.tokens"

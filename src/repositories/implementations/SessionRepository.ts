@@ -1,4 +1,4 @@
-import { IDatabase } from '../../database/IDatabase';
+import { IDatabase } from '../../services/database/IDatabase';
 import { SessionCreationSource } from '../../models/SessionCreationSource';
 import { ISessionRepository } from '../interfaces/ISessionRepository';
 import { inject, injectable } from "inversify";
@@ -19,7 +19,7 @@ export class SessionRepository implements ISessionRepository {
         const hours = String(date.getHours()).padStart(2, '0');
         const minutes = String(date.getMinutes()).padStart(2, '0');
         const dateStr = `${year}-${month}-${day} ${hours}:${minutes}`;
-        
+
         const dbResult = await this.db.query('INSERT INTO sessions (started_at, comment, creationSource) VALUES (?, ?, ?)',
             [dateStr, comment ?? "", creationSource]);
         return dbResult.insertId;

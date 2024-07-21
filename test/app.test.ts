@@ -2,7 +2,7 @@ import express from 'express';
 import request from 'supertest';
 import { myContainer } from "../src/inversify.config";
 import { DITokens } from "../src/inversify.tokens";
-import { IDatabase } from '../src/database/IDatabase';
+import { IDatabase } from '../src/services/database/IDatabase';
 import { ISessionRepository } from '../src/repositories/interfaces/ISessionRepository';
 import { IMeasurementRepository } from '../src/repositories/interfaces/IMeasurementRepository';
 import { Application } from '../src/app';

@@ -3,7 +3,7 @@ import { Socket } from 'net';
 import { Server } from 'http';
 import { myContainer } from "./inversify.config";
 import { DITokens } from "./inversify.tokens";
-import { IDatabase } from "./database/IDatabase";
+import { IDatabase } from "./services/database/IDatabase";
 import { ISessionRepository } from './repositories/interfaces/ISessionRepository';
 import { IMeasurementRepository } from './repositories/interfaces/IMeasurementRepository';
 import { ImportFromJsonService } from "./services/ImportFromJsonService";

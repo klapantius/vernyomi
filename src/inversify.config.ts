@@ -1,7 +1,7 @@
 import { Container } from "inversify";
 import "reflect-metadata";
-import { IDatabase } from "./database/IDatabase";
-import { MariaDBDatabase } from "./database/MariaDBDatabase";
+import { IDatabase } from "./services/database/IDatabase";
+import { MariaDBDatabase } from "./services/database/MariaDBDatabase";
 import { ISessionRepository } from "./repositories/interfaces/ISessionRepository";
 import { IMeasurementRepository } from "./repositories/interfaces/IMeasurementRepository";
 import { SessionRepository } from "./repositories/implementations/SessionRepository";
