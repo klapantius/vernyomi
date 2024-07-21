@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { myContainer } from '../inversify.config';
+import { DITokens } from '../inversify.tokens';
 import { ISessionRepository } from '../repositories/interfaces/ISessionRepository';
 import { Measurement } from '../models/Measurement';
 import { IMeasurementRepository } from '../repositories/interfaces/IMeasurementRepository';
@@ -79,12 +80,12 @@ export class ImportFromJsonService {
             puls: entry.puls,
             // comment: entry.comment,
         });
-        const repository = myContainer.get<IMeasurementRepository>('IMeasurementRepository');
+        const repository = myContainer.get<IMeasurementRepository>(DITokens.MeasurementRepository);
         await repository.save(measurement);
     }
 
     async saveGroupAsSession(measurements: BackupEntry[]) {
-        const repository = myContainer.get<ISessionRepository>('ISessionRepository');
+        const repository = myContainer.get<ISessionRepository>(DITokens.SessionRepository);
         const sessionId = await repository.createSessionAsync(
             SessionCreationSource.ImportFromBackup,
             measurements[0].comment);

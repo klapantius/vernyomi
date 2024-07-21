@@ -1,4 +1,5 @@
 import { myContainer } from '../inversify.config';
+import { DITokens } from '../inversify.tokens';
 import { SessionCreationSource } from '../models/SessionCreationSource';
 import { ISessionRepository } from '../repositories/interfaces/ISessionRepository';
 
@@ -6,7 +7,7 @@ export class SessionService {
     sessionRepository: ISessionRepository;
 
     constructor() {
-        this.sessionRepository = myContainer.get<ISessionRepository>('ISessionRepository');
+        this.sessionRepository = myContainer.get<ISessionRepository>(DITokens.SessionRepository);
     }
 
     public async createSessionAsync(creationSource: SessionCreationSource): Promise<number> {

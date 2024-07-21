@@ -1,15 +1,15 @@
-import { IDatabase } from '../../database/IDatabase'; // Import the correct type 'IDatabase'
+import { IDatabase } from '../../database/IDatabase';
 import { SessionCreationSource } from '../../models/SessionCreationSource';
 import { ISessionRepository } from '../interfaces/ISessionRepository';
-import { injectable } from "inversify";
+import { inject, injectable } from "inversify";
+import { DITokens } from "../../inversify.tokens"
 
 @injectable()
 export class SessionRepository implements ISessionRepository {
-    private db: IDatabase;
 
-    constructor(db: IDatabase) {
-        this.db = db;
-    }
+    constructor(
+        @inject(DITokens.DatabaseService) private db: IDatabase
+    ) { }
 
     public async createSessionAsync(creationSource: SessionCreationSource, comment?: string): Promise<number> {
         const dbResult = await this.db.query('INSERT INTO sessions (timestamp, comment, creationSource) VALUES (?)',

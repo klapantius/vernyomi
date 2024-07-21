@@ -1,6 +1,7 @@
 import express from 'express';
 import request from 'supertest';
 import { myContainer } from "../src/inversify.config";
+import { DITokens } from "../src/inversify.tokens";
 import { IDatabase } from '../src/database/IDatabase';
 import { ISessionRepository } from '../src/repositories/interfaces/ISessionRepository';
 import { IMeasurementRepository } from '../src/repositories/interfaces/IMeasurementRepository';
@@ -34,12 +35,12 @@ describe('Application', () => {
         measurementRepository = {
             save: jest.fn().mockResolvedValue(undefined)
         };
-        myContainer.unbind('IDatabase');
-        myContainer.bind<IDatabase>('IDatabase').toConstantValue(database);
-        myContainer.unbind('ISessionRepository');
-        myContainer.bind<ISessionRepository>('ISessionRepository').toConstantValue(sessionRepository);
-        myContainer.unbind('IMeasurementRepository');
-        myContainer.bind<IMeasurementRepository>('IMeasurementRepository').toConstantValue(measurementRepository);
+        myContainer.unbind(DITokens.DatabaseService);
+        myContainer.bind<IDatabase>(DITokens.DatabaseService).toConstantValue(database);
+        myContainer.unbind(DITokens.SessionRepository);
+        myContainer.bind<ISessionRepository>(DITokens.SessionRepository).toConstantValue(sessionRepository);
+        myContainer.unbind(DITokens.MeasurementRepository);
+        myContainer.bind<IMeasurementRepository>(DITokens.MeasurementRepository).toConstantValue(measurementRepository);
     });
 
     afterAll(async () => {

@@ -2,6 +2,7 @@ import express from 'express';
 import { Socket } from 'net';
 import { Server } from 'http';
 import { myContainer } from "./inversify.config";
+import { DITokens } from "./inversify.tokens";
 import { IDatabase } from "./database/IDatabase";
 import { ISessionRepository } from './repositories/interfaces/ISessionRepository';
 import { IMeasurementRepository } from './repositories/interfaces/IMeasurementRepository';
@@ -16,7 +17,7 @@ export class Application {
     private connections: NodeJS.Socket[] = [];
 
     constructor() {
-        this.database = myContainer.get<IDatabase>('IDatabase');
+        this.database = myContainer.get<IDatabase>(DITokens.DatabaseService);
         this.app = express();
     }
 
@@ -29,7 +30,7 @@ export class Application {
         });
 
         this.app.post('/start-session', async (_, res) => {
-            const repo = myContainer.get<ISessionRepository>('ISessionRepository');
+            const repo = myContainer.get<ISessionRepository>(DITokens.SessionRepository);
             res.json({
                 sessionId: await repo.createSessionAsync(SessionCreationSource.InputFromUI),
                 message: 'Session started successfully'
@@ -37,7 +38,7 @@ export class Application {
         });
 
         this.app.post('/save-measurement', async (req, res) => {
-            const repo = myContainer.get<IMeasurementRepository>('IMeasurementRepository');
+            const repo = myContainer.get<IMeasurementRepository>(DITokens.MeasurementRepository);
             const measurementService = new MeasurementService(repo);
             await measurementService.saveMeasurement(req.body);
             res.json({

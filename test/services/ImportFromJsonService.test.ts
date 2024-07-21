@@ -3,7 +3,8 @@ import { BackupEntry } from '../../src/models/BackupEntry';
 import { IMeasurementRepository } from '../../src/repositories/interfaces/IMeasurementRepository';
 import { ISessionRepository } from '../../src/repositories/interfaces/ISessionRepository';
 import { myContainer } from '../../src/inversify.config';
-import fs from 'fs'; // Add this line to import the 'fs' module
+import { DITokens } from '../../src/inversify.tokens';
+import fs from 'fs';
 import { SessionCreationSource } from '../../src/models/SessionCreationSource';
 
 describe('ImportFromJsonService', () => {
@@ -23,10 +24,10 @@ describe('ImportFromJsonService', () => {
         mockMeasurementRepository = {
             save: jest.fn().mockResolvedValue(undefined)
         };
-        myContainer.unbind('IMeasurementRepository');
-        myContainer.bind<IMeasurementRepository>('IMeasurementRepository').toConstantValue(mockMeasurementRepository as IMeasurementRepository);
-        myContainer.unbind('ISessionRepository');
-        myContainer.bind<ISessionRepository>('ISessionRepository').toConstantValue(mockSessionRepository as ISessionRepository);
+        myContainer.unbind(DITokens.MeasurementRepository);
+        myContainer.bind<IMeasurementRepository>(DITokens.MeasurementRepository).toConstantValue(mockMeasurementRepository as IMeasurementRepository);
+        myContainer.unbind(DITokens.SessionRepository);
+        myContainer.bind<ISessionRepository>(DITokens.SessionRepository).toConstantValue(mockSessionRepository as ISessionRepository);
         service = new ImportFromJsonService('../../test/data/backup.json', 5);
     });
 
