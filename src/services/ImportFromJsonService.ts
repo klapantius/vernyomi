@@ -27,13 +27,19 @@ export class ImportFromJsonService {
     }
 
     private entryToTimestamp(entry: BackupEntry): number {
-        const [year, month, day] = entry.date.split('.').map(Number);
+        const [y, month, day] = entry.date.split('.').map(Number);
+        const year = y < 100 ? y + 2000 : y;
         const [hour, minute] = entry.time.split(':').map(Number);
         return new Date(year, month - 1, day, hour, minute).getTime();
     }
 
     async loadAndGroupAsync(forceLoad: Boolean = false): Promise<BackupEntry[][]> {
-        if (!this.entries || forceLoad) { await this.loadAsync(); } // Ensure entries are loaded
+        // Ensure entries are loaded
+        if (!this.entries || this.entries.length === 0 || forceLoad) {
+            await this.loadAsync();
+        }
+
+        // sort and group them
         const sortedEntries = this.entries.sort((a, b) => this.entryToTimestamp(a) - this.entryToTimestamp(b));
         this.grouppedEntries = [];
         let currentGroup: BackupEntry[] = [];
@@ -88,7 +94,8 @@ export class ImportFromJsonService {
         const repository = myContainer.get<ISessionRepository>(DITokens.SessionRepository);
         const sessionId = await repository.createSessionAsync(
             SessionCreationSource.ImportFromBackup,
-            measurements[0].comment);
+            measurements[0].comment,
+            new Date(this.entryToTimestamp(measurements[0])));
         return sessionId;
     }
 

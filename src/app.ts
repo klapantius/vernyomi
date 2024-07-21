@@ -92,9 +92,17 @@ export class Application {
         await this.database.warmup();
 
         // import data from backup before the first run
-        const backupLoader = new ImportFromJsonService('/home/bazsi/code/helloworld/backup.json', 30);
-        const grouppedEntries = await backupLoader.loadAndGroupAsync()
-        console.log(`Loaded ${backupLoader.entries.length} measurements of ${grouppedEntries.length} sessions from backup file.`);
+        if (process.argv.includes('--import-from-backup'))
+        {
+            if (process.argv.indexOf('--import-from-backup') + 1 >= process.argv.length) {
+                throw new Error('Please provide a filename to import from');
+            }
+            const filename = process.argv[process.argv.indexOf('--import-from-backup') + 1];
+            const backupLoader = new ImportFromJsonService(filename, 30);
+            const grouppedEntries = await backupLoader.loadAndGroupAsync()
+            console.log(`Loaded ${backupLoader.entries.length} measurements of ${grouppedEntries.length} sessions from backup file.`);
+            backupLoader.saveToDatabase();
+        }
 
         // start the web server for the page and API
         this.setupServer();

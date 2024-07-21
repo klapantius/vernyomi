@@ -12,9 +12,9 @@ export class SessionRepository implements ISessionRepository {
         @inject(DITokens.DatabaseService) private db: IDatabase
     ) { }
 
-    public async createSessionAsync(creationSource: SessionCreationSource, comment?: string): Promise<number> {
+    public async createSessionAsync(creationSource: SessionCreationSource, comment?: string, createdAt?: Date): Promise<number> {
         const dbResult = await this.db.query('INSERT INTO sessions (started_at, comment, creationSource) VALUES (?, ?, ?)',
-            [GetDateString(), comment ?? "", creationSource]);
+            [GetDateString(createdAt), comment ?? "", creationSource]);
         const id = serializeBigInt(dbResult.insertId);
         if (typeof id === 'number') {
             return id;

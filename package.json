@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && copyfiles src/public/* built",
+    "build": "tsc && copyfiles src/public/* src/connection.cfg built",
     "test": "jest",
     "test-openHandles": "jest --detectOpenHandles",
     "run": "copyfiles connection.cfg built/src && cd built/src && node index.js"
