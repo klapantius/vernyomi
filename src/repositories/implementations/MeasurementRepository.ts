@@ -11,7 +11,9 @@ export class MeasurementRepository {
     ) { }
 
     async save(measurement: Measurement): Promise<number> {
-        const dbResult = await this.db.query('INSERT INTO measurements (sessionId, sys, dia, puls) VALUES (?, ?, ?, ?)', [measurement.sessionId, measurement.sys, measurement.dia, measurement.puls]);
+        const dbResult = await this.db.query(
+            'INSERT INTO measurements (session_id, sys, dia, puls) VALUES (?, ?, ?, ?)',
+             [measurement.sessionId, measurement.sys, measurement.dia, measurement.puls]);
         return dbResult.insertId;
     }
 }
