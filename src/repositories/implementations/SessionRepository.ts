@@ -3,6 +3,7 @@ import { SessionCreationSource } from '../../models/SessionCreationSource';
 import { ISessionRepository } from '../interfaces/ISessionRepository';
 import { inject, injectable } from "inversify";
 import { DITokens } from "../../inversify.tokens"
+import { GetDateString, serializeBigInt } from '../../services/database/utils';
 
 @injectable()
 export class SessionRepository implements ISessionRepository {
@@ -12,16 +13,12 @@ export class SessionRepository implements ISessionRepository {
     ) { }
 
     public async createSessionAsync(creationSource: SessionCreationSource, comment?: string): Promise<number> {
-        const date = new Date();
-        const year = date.getFullYear();
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const day = String(date.getDate()).padStart(2, '0');
-        const hours = String(date.getHours()).padStart(2, '0');
-        const minutes = String(date.getMinutes()).padStart(2, '0');
-        const dateStr = `${year}-${month}-${day} ${hours}:${minutes}`;
-
         const dbResult = await this.db.query('INSERT INTO sessions (started_at, comment, creationSource) VALUES (?, ?, ?)',
-            [dateStr, comment ?? "", creationSource]);
-        return dbResult.insertId;
+            [GetDateString(), comment ?? "", creationSource]);
+        const id = serializeBigInt(dbResult.insertId);
+        if (typeof id === 'number') {
+            return id;
+        }
+        throw new Error('session ID is already too big to be represented as a number');
     }
 }
