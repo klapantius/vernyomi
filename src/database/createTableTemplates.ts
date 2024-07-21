@@ -1,8 +1,8 @@
 export class CreateTableTemplates {
-    // TODO: add `comment varchar(255),`
     public static Sessions = `create table if not exists sessions (
         session_id int auto_increment,
         creationSource varchar(30),
+        comment tinytext default null,
         started_at timestamp default current_timestamp,
         primary key(session_id)
     );`; // no engine specification ==> InnoDB will be applied as default

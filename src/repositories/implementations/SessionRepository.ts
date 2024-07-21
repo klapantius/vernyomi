@@ -11,9 +11,9 @@ export class SessionRepository implements ISessionRepository {
         this.db = db;
     }
 
-    public async createSessionAsync(creationSource: SessionCreationSource): Promise<number> {
-        const dbResult = await this.db.query('INSERT INTO sessions (timestamp, creationSource) VALUES (?)',
-            [new Date(), creationSource]);
+    public async createSessionAsync(creationSource: SessionCreationSource, comment?: string): Promise<number> {
+        const dbResult = await this.db.query('INSERT INTO sessions (timestamp, comment, creationSource) VALUES (?)',
+            [new Date(), comment ?? null, creationSource]);
         return dbResult.insertId;
     }
 }

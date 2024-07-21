@@ -1,5 +1,5 @@
 import { SessionCreationSource } from '../../models/SessionCreationSource';
 
 export interface ISessionRepository {
-    createSessionAsync(creationSource: SessionCreationSource): Promise<number>;
+    createSessionAsync(creationSource: SessionCreationSource, comment?: string): Promise<number>;
 }

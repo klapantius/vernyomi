@@ -32,22 +32,22 @@ describe('ImportFromJsonService', () => {
 
     it('should load entries from file', async () => {
         const filePath = '/path/to/backup.json';
-        const data = JSON.stringify({ entries: [{ date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70 }] });
+        const data = JSON.stringify({ entries: [{ date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70, comment: 'foo' }] });
         jest.spyOn(fs.promises, 'readFile').mockResolvedValue(data);
 
         const service = new ImportFromJsonService(filePath, 5);
         await service.loadAsync();
 
         expect(fs.promises.readFile).toHaveBeenCalledWith(filePath, 'utf8');
-        expect(service.entries).toEqual([{ date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70 }]);
+        expect(service.entries).toEqual([{ date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70, comment: 'foo' }]);
     });
 
     it('should group measurements into sessions based on the specified time span', async () => {
         const entries: BackupEntry[] = [
-            { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70 },
-            { date: '2023.11.22', time: '01:05', sys: 130, dia: 85, puls: 75 },
-            { date: '2023.11.22', time: '02:10', sys: 125, dia: 82, puls: 72 },
-            { date: '2023.11.22', time: '02:15', sys: 122, dia: 78, puls: 68 },
+            { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70, comment: 'foo' },
+            { date: '2023.11.22', time: '01:05', sys: 130, dia: 85, puls: 75, comment: 'foo' },
+            { date: '2023.11.22', time: '02:10', sys: 125, dia: 82, puls: 72, comment: 'foo' },
+            { date: '2023.11.22', time: '02:15', sys: 122, dia: 78, puls: 68, comment: 'foo' },
         ];
         const timeSpan = 10; // Time span in minutes
 
@@ -58,12 +58,12 @@ describe('ImportFromJsonService', () => {
 
         expect(groupedEntries).toEqual([
             [
-                { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70 },
-                { date: '2023.11.22', time: '01:05', sys: 130, dia: 85, puls: 75 },
+                { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70, comment: 'foo' },
+                { date: '2023.11.22', time: '01:05', sys: 130, dia: 85, puls: 75, comment: 'foo' },
             ],
             [
-                { date: '2023.11.22', time: '02:10', sys: 125, dia: 82, puls: 72 },
-                { date: '2023.11.22', time: '02:15', sys: 122, dia: 78, puls: 68 },
+                { date: '2023.11.22', time: '02:10', sys: 125, dia: 82, puls: 72, comment: 'foo' },
+                { date: '2023.11.22', time: '02:15', sys: 122, dia: 78, puls: 68, comment: 'foo' },
             ],
         ]);
     });
@@ -75,7 +75,7 @@ describe('ImportFromJsonService', () => {
             sys: 120,
             dia: 80,
             puls: 70,
-            // comment: 'Test comment', // Uncomment if your model uses it
+            comment: 'Test comment'
         };
         const sessionId = 1;
 
@@ -95,12 +95,12 @@ describe('ImportFromJsonService', () => {
     it('should save the entries to the database grouped by session', async () => {
         const groupedEntries: BackupEntry[][] = [
             [
-                { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70 },
-                { date: '2023.11.22', time: '01:05', sys: 130, dia: 85, puls: 75 },
+                { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70, comment: 'foo' },
+                { date: '2023.11.22', time: '01:05', sys: 130, dia: 85, puls: 75, comment: 'Test comment' },
             ],
             [
-                { date: '2023.11.22', time: '02:10', sys: 125, dia: 82, puls: 72 },
-                { date: '2023.11.22', time: '02:15', sys: 122, dia: 78, puls: 68 },
+                { date: '2023.11.22', time: '02:10', sys: 125, dia: 82, puls: 72, comment: 'bar' },
+                { date: '2023.11.22', time: '02:15', sys: 122, dia: 78, puls: 68, comment: 'Test comment' },
             ],
         ];
 
@@ -119,22 +119,24 @@ describe('ImportFromJsonService', () => {
         await service.saveToDatabase();
 
         // expect(saveGroupAsSessionMock).toHaveBeenCalledTimes(2);
-        expect(mockSessionRepository.createSessionAsync).toHaveBeenCalledWith(SessionCreationSource.ImportFromBackup);
+        expect(mockSessionRepository.createSessionAsync).toHaveBeenCalledWith(SessionCreationSource.ImportFromBackup, "foo");
+        expect(mockSessionRepository.createSessionAsync).toHaveBeenCalledWith(SessionCreationSource.ImportFromBackup, "bar");
+        // TODO: this should better check how the IMeasurementRepository function gets called
         expect(saveEntryWithSessionIdMock).toHaveBeenCalledTimes(4);
         expect(saveEntryWithSessionIdMock).toHaveBeenCalledWith(
-            { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70 },
+            { date: '2023.11.22', time: '01:02', sys: 120, dia: 80, puls: 70, comment: 'foo' },
             1
         );
         expect(saveEntryWithSessionIdMock).toHaveBeenCalledWith(
-            { date: '2023.11.22', time: '01:05', sys: 130, dia: 85, puls: 75 },
+            { date: '2023.11.22', time: '01:05', sys: 130, dia: 85, puls: 75, comment: 'Test comment' },
             1
         );
         expect(saveEntryWithSessionIdMock).toHaveBeenCalledWith(
-            { date: '2023.11.22', time: '02:10', sys: 125, dia: 82, puls: 72 },
+            { date: '2023.11.22', time: '02:10', sys: 125, dia: 82, puls: 72, comment: 'bar' },
             2
         );
         expect(saveEntryWithSessionIdMock).toHaveBeenCalledWith(
-            { date: '2023.11.22', time: '02:15', sys: 122, dia: 78, puls: 68 },
+            { date: '2023.11.22', time: '02:15', sys: 122, dia: 78, puls: 68, comment: 'Test comment' },
             2
         );
     });

@@ -39699,10 +39699,10 @@
         {
             "date": "22.07.14",
             "time": "05:48",
-            "sys": 0,
-            "dia": 131,
-            "puls": 79,
-            "comment": "50"
+            "sys": 130,
+            "dia": 79,
+            "puls": 50,
+            "comment": ""
         },
         {
             "date": "22.07.14",
@@ -40726,7 +40726,16 @@
             "sys": 133,
             "dia": 76,
             "puls": 53,
-            "comment": "145/76/53"
+            "comment": ""
+        },
+        {
+            "date": "22.08.06",
+            "time": "07:25",
+            "sys": 145,
+            "dia": 76,
+            "puls": 53,
+            "comment": "",
+            "xxx": "145, 76"
         },
         {
             "date": "22.08.06",
@@ -40782,7 +40791,7 @@
             "sys": 142,
             "dia": 83,
             "puls": 42,
-            "comment": "J"
+            "comment": ""
         },
         {
             "date": "22.08.07",
@@ -49382,7 +49391,7 @@
             "sys": 145,
             "dia": 82,
             "puls": 54,
-            "comment": "Die Magnesiumtablette, die ich seit etwa 4-5 Wochen"
+            "comment": "Die Magnesiumtablette, die ich seit etwa 4-5 Wochen täglich nehme enthält calcium! Von morgen an nehme ich sie nicht mehr."
         },
         {
             "date": "23.03.15",
@@ -49390,7 +49399,7 @@
             "sys": 136,
             "dia": 83,
             "puls": 54,
-            "comment": "täglich nehme enthält calcium!"
+            "comment": ""
         },
         {
             "date": "23.03.15",
@@ -49398,7 +49407,7 @@
             "sys": 138,
             "dia": 79,
             "puls": 55,
-            "comment": "Von morgen an nehme ich sie nicht mehr."
+            "comment": ""
         },
         {
             "date": "23.03.16",
@@ -54726,7 +54735,16 @@
             "sys": 134,
             "dia": 75,
             "puls": 47,
-            "comment": "138, 77"
+            "comment": ""
+        },
+        {
+            "date": "23.07.26",
+            "time": "05:44",
+            "sys": 138,
+            "dia": 77,
+            "puls": 47,
+            "comment": "",
+            "xxx": "138, 77"
         },
         {
             "date": "23.07.26",
@@ -54822,7 +54840,16 @@
             "sys": 129,
             "dia": 84,
             "puls": 45,
-            "comment": "137, 84"
+            "comment": ""
+        },
+        {
+            "date": "23.07.28",
+            "time": "05:41",
+            "sys": 137,
+            "dia": 84,
+            "puls": 45,
+            "comment": "",
+            "xxx": "137, 84"
         },
         {
             "date": "23.07.29",
@@ -54830,7 +54857,16 @@
             "sys": 139,
             "dia": 84,
             "puls": 53,
-            "comment": "148, 87"
+            "comment": ""
+        },
+        {
+            "date": "23.07.29",
+            "time": "06:49",
+            "sys": 148,
+            "dia": 87,
+            "puls": 53,
+            "comment": "",
+            "xxx": "148, 87"
         },
         {
             "date": "23.07.29",
@@ -54854,7 +54890,16 @@
             "sys": 145,
             "dia": 87,
             "puls": 48,
-            "comment": "141, 88"
+            "comment": ""
+        },
+        {
+            "date": "23.07.30",
+            "time": "06:56",
+            "sys": 141,
+            "dia": 88,
+            "puls": 48,
+            "comment": "",
+            "xxx": "141, 88"
         },
         {
             "date": "23.07.30",
@@ -54902,7 +54947,16 @@
             "sys": 137,
             "dia": 81,
             "puls": 49,
-            "comment": "3+2, 143, 86"
+            "comment": "3+2, "
+        },
+        {
+            "date": "23.07.31",
+            "time": "05:42",
+            "sys": 143,
+            "dia": 86,
+            "puls": 49,
+            "comment": "3+2, ",
+            "xxx": "143, 86"
         },
         {
             "date": "23.07.31",
@@ -55110,7 +55164,16 @@
             "sys": 137,
             "dia": 78,
             "puls": 47,
-            "comment": "151, 85"
+            "comment": ""
+        },
+        {
+            "date": "23.08.04",
+            "time": "05:43",
+            "sys": 151,
+            "dia": 85,
+            "puls": 47,
+            "comment": "",
+            "xxx": "151, 85"
         },
         {
             "date": "23.08.04",
@@ -55142,7 +55205,16 @@
             "sys": 136,
             "dia": 80,
             "puls": 45,
-            "comment": "153, 82"
+            "comment": ""
+        },
+        {
+            "date": "23.08.05",
+            "time": "07:10",
+            "sys": 153,
+            "dia": 82,
+            "puls": 45,
+            "comment": "",
+            "xxx": "153, 82"
         },
         {
             "date": "23.08.05",
@@ -55182,7 +55254,16 @@
             "sys": 132,
             "dia": 80,
             "puls": 51,
-            "comment": "144, 81"
+            "comment": ""
+        },
+        {
+            "date": "23.08.05",
+            "time": "21:08",
+            "sys": 144,
+            "dia": 81,
+            "puls": 51,
+            "comment": "",
+            "xxx": "144, 81"
         },
         {
             "date": "23.08.06",
@@ -55206,7 +55287,16 @@
             "sys": 133,
             "dia": 87,
             "puls": 52,
-            "comment": "140, 83"
+            "comment": ""
+        },
+        {
+            "date": "23.08.06",
+            "time": "06:58",
+            "sys": 140,
+            "dia": 83,
+            "puls": 52,
+            "comment": "",
+            "xxx": "140, 83"
         },
         {
             "date": "23.08.06",
@@ -55238,7 +55328,16 @@
             "sys": 129,
             "dia": 79,
             "puls": 47,
-            "comment": "137, 84"
+            "comment": ""
+        },
+        {
+            "date": "23.08.07",
+            "time": "05:41",
+            "sys": 137,
+            "dia": 84,
+            "puls": 47,
+            "comment": "",
+            "xxx": "137, 84"
         },
         {
             "date": "23.08.07",
@@ -55246,7 +55345,16 @@
             "sys": 131,
             "dia": 79,
             "puls": 46,
-            "comment": "133, 74"
+            "comment": ""
+        },
+        {
+            "date": "23.08.07",
+            "time": "05:42",
+            "sys": 133,
+            "dia": 74,
+            "puls": 46,
+            "comment": "",
+            "xxx": "133, 74"
         },
         {
             "date": "23.08.07",
@@ -55286,7 +55394,16 @@
             "sys": 130,
             "dia": 84,
             "puls": 44,
-            "comment": "148, 84"
+            "comment": ""
+        },
+        {
+            "date": "23.08.08",
+            "time": "05:39",
+            "sys": 148,
+            "dia": 84,
+            "puls": 44,
+            "comment": "",
+            "xxx": "148, 84"
         },
         {
             "date": "23.08.08",
@@ -55294,7 +55411,16 @@
             "sys": 136,
             "dia": 83,
             "puls": 43,
-            "comment": "150, 100"
+            "comment": ""
+        },
+        {
+            "date": "23.08.08",
+            "time": "05:40",
+            "sys": 150,
+            "dia": 100,
+            "puls": 43,
+            "comment": "",
+            "xxx": "150, 100"
         },
         {
             "date": "23.08.08",
@@ -55302,7 +55428,16 @@
             "sys": 129,
             "dia": 80,
             "puls": 43,
-            "comment": "142, 79"
+            "comment": ""
+        },
+        {
+            "date": "23.08.08",
+            "time": "05:41",
+            "sys": 142,
+            "dia": 79,
+            "puls": 43,
+            "comment": "",
+            "xxx": "142, 79"
         },
         {
             "date": "23.08.09",
@@ -55334,7 +55469,16 @@
             "sys": 129,
             "dia": 68,
             "puls": 54,
-            "comment": "138, 79"
+            "comment": ""
+        },
+        {
+            "date": "23.08.09",
+            "time": "20:11",
+            "sys": 138,
+            "dia": 79,
+            "puls": 54,
+            "comment": "",
+            "xxx": "138, 79"
         },
         {
             "date": "23.08.09",
@@ -55350,7 +55494,16 @@
             "sys": 132,
             "dia": 79,
             "puls": 55,
-            "comment": "140, 76"
+            "comment": ""
+        },
+        {
+            "date": "23.08.09",
+            "time": "20:13",
+            "sys": 140,
+            "dia": 76,
+            "puls": 55,
+            "comment": "",
+            "xxx": "140, 76"
         },
         {
             "date": "23.08.10",
@@ -55414,7 +55567,16 @@
             "sys": 137,
             "dia": 78,
             "puls": 46,
-            "comment": "149, 86"
+            "comment": ""
+        },
+        {
+            "date": "23.08.11",
+            "time": "05:42",
+            "sys": 149,
+            "dia": 86,
+            "puls": 46,
+            "comment": "",
+            "xxx": "149, 86"
         },
         {
             "date": "23.08.11",
@@ -55422,7 +55584,16 @@
             "sys": 133,
             "dia": 79,
             "puls": 49,
-            "comment": "swim, 141, 86"
+            "comment": "swim, "
+        },
+        {
+            "date": "23.08.11",
+            "time": "05:43",
+            "sys": 141,
+            "dia": 86,
+            "puls": 49,
+            "comment": "swim, ",
+            "xxx": "141, 86"
         },
         {
             "date": "23.08.11",
@@ -55606,7 +55777,16 @@
             "sys": 141,
             "dia": 85,
             "puls": 45,
-            "comment": "146, 88"
+            "comment": ""
+        },
+        {
+            "date": "23.08.16",
+            "time": "05:49",
+            "sys": 146,
+            "dia": 88,
+            "puls": 45,
+            "comment": "",
+            "xxx": "146, 88"
         },
         {
             "date": "23.08.16",
@@ -55614,7 +55794,16 @@
             "sys": 142,
             "dia": 81,
             "puls": 47,
-            "comment": "Akupunktur, 146, 90"
+            "comment": "Akupunktur, "
+        },
+        {
+            "date": "23.08.16",
+            "time": "05:50",
+            "sys": 146,
+            "dia": 90,
+            "puls": 47,
+            "comment": "Akupunktur, ",
+            "xxx": "146, 90"
         },
         {
             "date": "23.08.17",
@@ -55750,7 +55939,16 @@
             "sys": 129,
             "dia": 78,
             "puls": 52,
-            "comment": "142, 81"
+            "comment": ""
+        },
+        {
+            "date": "23.09.10",
+            "time": "07:16",
+            "sys": 142,
+            "dia": 81,
+            "puls": 52,
+            "comment": "",
+            "xxx": "142, 81"
         },
         {
             "date": "23.09.10",
@@ -55766,7 +55964,16 @@
             "sys": 143,
             "dia": 87,
             "puls": 61,
-            "comment": "153, 85"
+            "comment": ""
+        },
+        {
+            "date": "23.09.10",
+            "time": "19:33",
+            "sys": 153,
+            "dia": 85,
+            "puls": 61,
+            "comment": "",
+            "xxx": "153, 85"
         },
         {
             "date": "23.09.10",
@@ -55774,7 +55981,16 @@
             "sys": 142,
             "dia": 84,
             "puls": 61,
-            "comment": "159, 92"
+            "comment": ""
+        },
+        {
+            "date": "23.09.10",
+            "time": "19:34",
+            "sys": 159,
+            "dia": 92,
+            "puls": 61,
+            "comment": "",
+            "xxx": "159, 92"
         },
         {
             "date": "23.09.10",
@@ -55814,7 +56030,16 @@
             "sys": 129,
             "dia": 66,
             "puls": 71,
-            "comment": "run, plank, 137, 67"
+            "comment": "run, plank, "
+        },
+        {
+            "date": "23.09.11",
+            "time": "20:08",
+            "sys": 137,
+            "dia": 67,
+            "puls": 71,
+            "comment": "run, plank, ",
+            "xxx": "137, 67"
         },
         {
             "date": "23.09.11",
@@ -55846,7 +56071,16 @@
             "sys": 127,
             "dia": 78,
             "puls": 52,
-            "comment": "136, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.09.12",
+            "time": "05:41",
+            "sys": 136,
+            "dia": 80,
+            "puls": 52,
+            "comment": "",
+            "xxx": "136, 80"
         },
         {
             "date": "23.09.12",
@@ -55886,7 +56120,16 @@
             "sys": 119,
             "dia": 82,
             "puls": 52,
-            "comment": "142, 89"
+            "comment": ""
+        },
+        {
+            "date": "23.09.13",
+            "time": "05:35",
+            "sys": 142,
+            "dia": 89,
+            "puls": 52,
+            "comment": "",
+            "xxx": "142, 89"
         },
         {
             "date": "23.09.13",
@@ -55934,7 +56177,16 @@
             "sys": 134,
             "dia": 84,
             "puls": 47,
-            "comment": "143, 85"
+            "comment": ""
+        },
+        {
+            "date": "23.09.14",
+            "time": "05:37",
+            "sys": 143,
+            "dia": 85,
+            "puls": 47,
+            "comment": "",
+            "xxx": "143, 85"
         },
         {
             "date": "23.09.14",
@@ -55958,7 +56210,16 @@
             "sys": 129,
             "dia": 78,
             "puls": 51,
-            "comment": "142, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.09.15",
+            "time": "05:40",
+            "sys": 142,
+            "dia": 80,
+            "puls": 51,
+            "comment": "",
+            "xxx": "142, 80"
         },
         {
             "date": "23.09.15",
@@ -55966,7 +56227,16 @@
             "sys": 133,
             "dia": 80,
             "puls": 53,
-            "comment": "137, 79"
+            "comment": ""
+        },
+        {
+            "date": "23.09.15",
+            "time": "05:41",
+            "sys": 137,
+            "dia": 79,
+            "puls": 53,
+            "comment": "",
+            "xxx": "137, 79"
         },
         {
             "date": "23.09.15",
@@ -56030,7 +56300,16 @@
             "sys": 124,
             "dia": 81,
             "puls": 64,
-            "comment": "rad, 145, 84"
+            "comment": "rad, "
+        },
+        {
+            "date": "23.09.16",
+            "time": "20:13",
+            "sys": 145,
+            "dia": 84,
+            "puls": 64,
+            "comment": "rad, ",
+            "xxx": "145, 84"
         },
         {
             "date": "23.09.16",
@@ -56174,7 +56453,16 @@
             "sys": 134,
             "dia": 79,
             "puls": 54,
-            "comment": "141, 81"
+            "comment": ""
+        },
+        {
+            "date": "23.09.19",
+            "time": "20:16",
+            "sys": 141,
+            "dia": 81,
+            "puls": 54,
+            "comment": "",
+            "xxx": "141, 81"
         },
         {
             "date": "23.09.19",
@@ -56294,7 +56582,16 @@
             "sys": 134,
             "dia": 81,
             "puls": 46,
-            "comment": "139, 82"
+            "comment": ""
+        },
+        {
+            "date": "23.09.22",
+            "time": "05:41",
+            "sys": 139,
+            "dia": 82,
+            "puls": 46,
+            "comment": "",
+            "xxx": "139, 82"
         },
         {
             "date": "23.09.22",
@@ -56318,7 +56615,16 @@
             "sys": 133,
             "dia": 81,
             "puls": 47,
-            "comment": "alc, 139, 87"
+            "comment": "alc, "
+        },
+        {
+            "date": "23.09.23",
+            "time": "06:45",
+            "sys": 139,
+            "dia": 87,
+            "puls": 47,
+            "comment": "alc, ",
+            "xxx": "139, 87"
         },
         {
             "date": "23.09.23",
@@ -56326,7 +56632,16 @@
             "sys": 125,
             "dia": 80,
             "puls": 53,
-            "comment": "139, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.09.23",
+            "time": "06:46",
+            "sys": 139,
+            "dia": 80,
+            "puls": 53,
+            "comment": "",
+            "xxx": "139, 80"
         },
         {
             "date": "23.09.23",
@@ -56334,7 +56649,16 @@
             "sys": 130,
             "dia": 75,
             "puls": 50,
-            "comment": "138, 85"
+            "comment": ""
+        },
+        {
+            "date": "23.09.23",
+            "time": "06:47",
+            "sys": 138,
+            "dia": 85,
+            "puls": 50,
+            "comment": "",
+            "xxx": "138, 85"
         },
         {
             "date": "23.09.23",
@@ -56342,7 +56666,7 @@
             "sys": 145,
             "dia": 90,
             "puls": 49,
-            "comment": "1"
+            "comment": ""
         },
         {
             "date": "23.09.23",
@@ -56390,7 +56714,16 @@
             "sys": 136,
             "dia": 80,
             "puls": 52,
-            "comment": "146, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.09.24",
+            "time": "20:23",
+            "sys": 146,
+            "dia": 80,
+            "puls": 52,
+            "comment": "",
+            "xxx": "146, 80"
         },
         {
             "date": "23.09.24",
@@ -56422,7 +56755,16 @@
             "sys": 132,
             "dia": 81,
             "puls": 47,
-            "comment": "136, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.09.25",
+            "time": "05:43",
+            "sys": 136,
+            "dia": 80,
+            "puls": 47,
+            "comment": "",
+            "xxx": "136, 80"
         },
         {
             "date": "23.09.25",
@@ -56654,7 +56996,16 @@
             "sys": 125,
             "dia": 76,
             "puls": 59,
-            "comment": "rad, plank, 136, 78"
+            "comment": "rad, plank, "
+        },
+        {
+            "date": "23.09.30",
+            "time": "20:17",
+            "sys": 136,
+            "dia": 78,
+            "puls": 59,
+            "comment": "rad, plank, ",
+            "xxx": "136, 78"
         },
         {
             "date": "23.09.30",
@@ -56678,7 +57029,16 @@
             "sys": 121,
             "dia": 77,
             "puls": 52,
-            "comment": "plank, 135, 82"
+            "comment": "plank, "
+        },
+        {
+            "date": "23.10.01",
+            "time": "07:04",
+            "sys": 135,
+            "dia": 82,
+            "puls": 52,
+            "comment": "plank, ",
+            "xxx": "135, 82"
         },
         {
             "date": "23.10.01",
@@ -56710,7 +57070,16 @@
             "sys": 130,
             "dia": 76,
             "puls": 53,
-            "comment": "145, 76"
+            "comment": ""
+        },
+        {
+            "date": "23.10.01",
+            "time": "20:18",
+            "sys": 145,
+            "dia": 76,
+            "puls": 53,
+            "comment": "",
+            "xxx": "145, 76"
         },
         {
             "date": "23.10.01",
@@ -56750,7 +57119,16 @@
             "sys": 131,
             "dia": 83,
             "puls": 55,
-            "comment": "yoga, plank, 135, 82"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "23.10.02",
+            "time": "20:06",
+            "sys": 135,
+            "dia": 82,
+            "puls": 55,
+            "comment": "yoga, plank, ",
+            "xxx": "135, 82"
         },
         {
             "date": "23.10.02",
@@ -57014,7 +57392,16 @@
             "sys": 135,
             "dia": 82,
             "puls": 47,
-            "comment": "137, 83"
+            "comment": ""
+        },
+        {
+            "date": "23.10.08",
+            "time": "07:00",
+            "sys": 137,
+            "dia": 83,
+            "puls": 47,
+            "comment": "",
+            "xxx": "137, 83"
         },
         {
             "date": "23.10.08",
@@ -57038,7 +57425,16 @@
             "sys": 133,
             "dia": 77,
             "puls": 51,
-            "comment": "139, 78"
+            "comment": ""
+        },
+        {
+            "date": "23.10.08",
+            "time": "20:20",
+            "sys": 139,
+            "dia": 78,
+            "puls": 51,
+            "comment": "",
+            "xxx": "139, 78"
         },
         {
             "date": "23.10.08",
@@ -57062,7 +57458,16 @@
             "sys": 130,
             "dia": 78,
             "puls": 46,
-            "comment": "136, 77"
+            "comment": ""
+        },
+        {
+            "date": "23.10.09",
+            "time": "05:47",
+            "sys": 136,
+            "dia": 77,
+            "puls": 46,
+            "comment": "",
+            "xxx": "136, 77"
         },
         {
             "date": "23.10.09",
@@ -57086,7 +57491,16 @@
             "sys": 125,
             "dia": 83,
             "puls": 72,
-            "comment": "yoga, plank, swim, 139, 85"
+            "comment": "yoga, plank, swim, "
+        },
+        {
+            "date": "23.10.09",
+            "time": "21:21",
+            "sys": 139,
+            "dia": 85,
+            "puls": 72,
+            "comment": "yoga, plank, swim, ",
+            "xxx": "139, 85"
         },
         {
             "date": "23.10.09",
@@ -57158,7 +57572,16 @@
             "sys": 134,
             "dia": 82,
             "puls": 49,
-            "comment": "140, 89"
+            "comment": ""
+        },
+        {
+            "date": "23.10.11",
+            "time": "05:41",
+            "sys": 140,
+            "dia": 89,
+            "puls": 49,
+            "comment": "",
+            "xxx": "140, 89"
         },
         {
             "date": "23.10.11",
@@ -57206,7 +57629,16 @@
             "sys": 135,
             "dia": 77,
             "puls": 49,
-            "comment": "138, 81"
+            "comment": ""
+        },
+        {
+            "date": "23.10.12",
+            "time": "05:41",
+            "sys": 138,
+            "dia": 81,
+            "puls": 49,
+            "comment": "",
+            "xxx": "138, 81"
         },
         {
             "date": "23.10.12",
@@ -57278,7 +57710,16 @@
             "sys": 135,
             "dia": 83,
             "puls": 54,
-            "comment": "yoga, plank, 139, 83"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "23.10.13",
+            "time": "20:10",
+            "sys": 139,
+            "dia": 83,
+            "puls": 54,
+            "comment": "yoga, plank, ",
+            "xxx": "139, 83"
         },
         {
             "date": "23.10.13",
@@ -57310,7 +57751,16 @@
             "sys": 132,
             "dia": 83,
             "puls": 49,
-            "comment": "136, 83"
+            "comment": ""
+        },
+        {
+            "date": "23.10.14",
+            "time": "07:02",
+            "sys": 136,
+            "dia": 83,
+            "puls": 49,
+            "comment": "",
+            "xxx": "136, 83"
         },
         {
             "date": "23.10.14",
@@ -57326,7 +57776,16 @@
             "sys": 133,
             "dia": 82,
             "puls": 53,
-            "comment": "136, 86"
+            "comment": ""
+        },
+        {
+            "date": "23.10.14",
+            "time": "20:14",
+            "sys": 136,
+            "dia": 86,
+            "puls": 53,
+            "comment": "",
+            "xxx": "136, 86"
         },
         {
             "date": "23.10.14",
@@ -57358,7 +57817,16 @@
             "sys": 135,
             "dia": 80,
             "puls": 45,
-            "comment": "137, 83"
+            "comment": ""
+        },
+        {
+            "date": "23.10.15",
+            "time": "06:59",
+            "sys": 137,
+            "dia": 83,
+            "puls": 45,
+            "comment": "",
+            "xxx": "137, 83"
         },
         {
             "date": "23.10.15",
@@ -57374,7 +57842,16 @@
             "sys": 132,
             "dia": 77,
             "puls": 45,
-            "comment": "143, 87"
+            "comment": ""
+        },
+        {
+            "date": "23.10.16",
+            "time": "05:42",
+            "sys": 143,
+            "dia": 87,
+            "puls": 45,
+            "comment": "",
+            "xxx": "143, 87"
         },
         {
             "date": "23.10.16",
@@ -57422,7 +57899,16 @@
             "sys": 135,
             "dia": 88,
             "puls": 46,
-            "comment": "139, 83"
+            "comment": ""
+        },
+        {
+            "date": "23.10.17",
+            "time": "05:41",
+            "sys": 139,
+            "dia": 83,
+            "puls": 46,
+            "comment": "",
+            "xxx": "139, 83"
         },
         {
             "date": "23.10.17",
@@ -57550,7 +58036,16 @@
             "sys": 118,
             "dia": 70,
             "puls": 74,
-            "comment": "137, 77"
+            "comment": ""
+        },
+        {
+            "date": "23.10.19",
+            "time": "21:24",
+            "sys": 137,
+            "dia": 77,
+            "puls": 74,
+            "comment": "",
+            "xxx": "137, 77"
         },
         {
             "date": "23.10.19",
@@ -57574,7 +58069,16 @@
             "sys": 127,
             "dia": 82,
             "puls": 47,
-            "comment": "134, 84"
+            "comment": ""
+        },
+        {
+            "date": "23.10.20",
+            "time": "05:42",
+            "sys": 134,
+            "dia": 84,
+            "puls": 47,
+            "comment": "",
+            "xxx": "134, 84"
         },
         {
             "date": "23.10.20",
@@ -57606,7 +58110,16 @@
             "sys": 138,
             "dia": 82,
             "puls": 55,
-            "comment": "140, 77"
+            "comment": ""
+        },
+        {
+            "date": "23.10.20",
+            "time": "20:19",
+            "sys": 140,
+            "dia": 77,
+            "puls": 55,
+            "comment": "",
+            "xxx": "140, 77"
         },
         {
             "date": "23.10.21",
@@ -57614,7 +58127,16 @@
             "sys": 134,
             "dia": 88,
             "puls": 46,
-            "comment": "yoga, plank, 139, 84"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "23.10.21",
+            "time": "06:51",
+            "sys": 139,
+            "dia": 84,
+            "puls": 46,
+            "comment": "yoga, plank, ",
+            "xxx": "139, 84"
         },
         {
             "date": "23.10.21",
@@ -57662,7 +58184,16 @@
             "sys": 132,
             "dia": 82,
             "puls": 50,
-            "comment": "140, 82"
+            "comment": ""
+        },
+        {
+            "date": "23.10.22",
+            "time": "07:11",
+            "sys": 140,
+            "dia": 82,
+            "puls": 50,
+            "comment": "",
+            "xxx": "140, 82"
         },
         {
             "date": "23.10.22",
@@ -57670,7 +58201,16 @@
             "sys": 128,
             "dia": 82,
             "puls": 52,
-            "comment": "137, 81"
+            "comment": ""
+        },
+        {
+            "date": "23.10.22",
+            "time": "07:12",
+            "sys": 137,
+            "dia": 81,
+            "puls": 52,
+            "comment": "",
+            "xxx": "137, 81"
         },
         {
             "date": "23.10.22",
@@ -57678,7 +58218,16 @@
             "sys": 134,
             "dia": 80,
             "puls": 55,
-            "comment": "134, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.10.22",
+            "time": "07:13",
+            "sys": 134,
+            "dia": 80,
+            "puls": 55,
+            "comment": "",
+            "xxx": "134, 80"
         },
         {
             "date": "23.10.22",
@@ -57742,7 +58291,16 @@
             "sys": 126,
             "dia": 79,
             "puls": 59,
-            "comment": "144, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.10.23",
+            "time": "20:01",
+            "sys": 144,
+            "dia": 80,
+            "puls": 59,
+            "comment": "",
+            "xxx": "144, 80"
         },
         {
             "date": "23.10.23",
@@ -57758,7 +58316,16 @@
             "sys": 119,
             "dia": 73,
             "puls": 55,
-            "comment": "139, 90"
+            "comment": ""
+        },
+        {
+            "date": "23.10.24",
+            "time": "05:42",
+            "sys": 139,
+            "dia": 90,
+            "puls": 55,
+            "comment": "",
+            "xxx": "139, 90"
         },
         {
             "date": "23.10.24",
@@ -57806,7 +58373,16 @@
             "sys": 128,
             "dia": 82,
             "puls": 52,
-            "comment": "138, 83"
+            "comment": ""
+        },
+        {
+            "date": "23.10.25",
+            "time": "05:41",
+            "sys": 138,
+            "dia": 83,
+            "puls": 52,
+            "comment": "",
+            "xxx": "138, 83"
         },
         {
             "date": "23.10.25",
@@ -57854,7 +58430,16 @@
             "sys": 133,
             "dia": 77,
             "puls": 54,
-            "comment": "141, 84"
+            "comment": ""
+        },
+        {
+            "date": "23.10.26",
+            "time": "05:41",
+            "sys": 141,
+            "dia": 84,
+            "puls": 54,
+            "comment": "",
+            "xxx": "141, 84"
         },
         {
             "date": "23.10.26",
@@ -57902,7 +58487,16 @@
             "sys": 128,
             "dia": 81,
             "puls": 53,
-            "comment": "139, 84"
+            "comment": ""
+        },
+        {
+            "date": "23.10.27",
+            "time": "05:40",
+            "sys": 139,
+            "dia": 84,
+            "puls": 53,
+            "comment": "",
+            "xxx": "139, 84"
         },
         {
             "date": "23.10.27",
@@ -57926,7 +58520,16 @@
             "sys": 133,
             "dia": 72,
             "puls": 56,
-            "comment": "rad, 144, 72"
+            "comment": "rad, "
+        },
+        {
+            "date": "23.10.27",
+            "time": "20:08",
+            "sys": 144,
+            "dia": 72,
+            "puls": 56,
+            "comment": "rad, ",
+            "xxx": "144, 72"
         },
         {
             "date": "23.10.27",
@@ -57950,7 +58553,16 @@
             "sys": 132,
             "dia": 78,
             "puls": 49,
-            "comment": "yoga, ibc, 136, 84"
+            "comment": "yoga, ibc, "
+        },
+        {
+            "date": "23.10.28",
+            "time": "06:59",
+            "sys": 136,
+            "dia": 84,
+            "puls": 49,
+            "comment": "yoga, ibc, ",
+            "xxx": "136, 84"
         },
         {
             "date": "23.10.28",
@@ -57958,7 +58570,16 @@
             "sys": 128,
             "dia": 75,
             "puls": 52,
-            "comment": "141, 82"
+            "comment": ""
+        },
+        {
+            "date": "23.10.28",
+            "time": "07:00",
+            "sys": 141,
+            "dia": 82,
+            "puls": 52,
+            "comment": "",
+            "xxx": "141, 82"
         },
         {
             "date": "23.10.28",
@@ -57998,7 +58619,16 @@
             "sys": 128,
             "dia": 83,
             "puls": 52,
-            "comment": "yoga, ibc, 147, 89"
+            "comment": "yoga, ibc, "
+        },
+        {
+            "date": "23.10.29",
+            "time": "06:55",
+            "sys": 147,
+            "dia": 89,
+            "puls": 52,
+            "comment": "yoga, ibc, ",
+            "xxx": "147, 89"
         },
         {
             "date": "23.10.29",
@@ -58006,7 +58636,16 @@
             "sys": 126,
             "dia": 82,
             "puls": 52,
-            "comment": "140, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.10.29",
+            "time": "06:56",
+            "sys": 140,
+            "dia": 80,
+            "puls": 52,
+            "comment": "",
+            "xxx": "140, 80"
         },
         {
             "date": "23.10.29",
@@ -58014,7 +58653,7 @@
             "sys": 126,
             "dia": 81,
             "puls": 54,
-            "comment": ""
+            "comment": "atm"
         },
         {
             "date": "23.10.29",
@@ -58022,7 +58661,7 @@
             "sys": 118,
             "dia": 70,
             "puls": 63,
-            "comment": "atm"
+            "comment": ""
         },
         {
             "date": "23.10.29",
@@ -58046,7 +58685,16 @@
             "sys": 129,
             "dia": 80,
             "puls": 53,
-            "comment": "yoga, ibc, 150, 87"
+            "comment": "yoga, ibc, atm, "
+        },
+        {
+            "date": "23.10.30",
+            "time": "06:44",
+            "sys": 150,
+            "dia": 87,
+            "puls": 53,
+            "comment": "yoga, ibc, atm, ",
+            "xxx": "150, 87"
         },
         {
             "date": "23.10.30",
@@ -58054,7 +58702,7 @@
             "sys": 133,
             "dia": 84,
             "puls": 53,
-            "comment": "atm"
+            "comment": ""
         },
         {
             "date": "23.10.30",
@@ -58142,7 +58790,16 @@
             "sys": 135,
             "dia": 77,
             "puls": 55,
-            "comment": "139, 89"
+            "comment": ""
+        },
+        {
+            "date": "23.11.01",
+            "time": "05:34",
+            "sys": 139,
+            "dia": 89,
+            "puls": 55,
+            "comment": "",
+            "xxx": "139, 89"
         },
         {
             "date": "23.11.01",
@@ -58190,7 +58847,16 @@
             "sys": 134,
             "dia": 82,
             "puls": 76,
-            "comment": "yoga, plank, rad, tea, 138, 90"
+            "comment": "yoga, plank, rad, tea, "
+        },
+        {
+            "date": "23.11.06",
+            "time": "09:58",
+            "sys": 138,
+            "dia": 90,
+            "puls": 76,
+            "comment": "yoga, plank, rad, tea, ",
+            "xxx": "138, 90"
         },
         {
             "date": "23.11.06",
@@ -58238,7 +58904,16 @@
             "sys": 138,
             "dia": 83,
             "puls": 53,
-            "comment": "yoga, plank, ibc, 148, 94"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.07",
+            "time": "06:50",
+            "sys": 148,
+            "dia": 94,
+            "puls": 53,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "148, 94"
         },
         {
             "date": "23.11.07",
@@ -58286,7 +58961,16 @@
             "sys": 124,
             "dia": 83,
             "puls": 61,
-            "comment": "yoga, plank, ibc, 133, 87"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.08",
+            "time": "06:01",
+            "sys": 133,
+            "dia": 87,
+            "puls": 61,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "133, 87"
         },
         {
             "date": "23.11.08",
@@ -58334,7 +59018,16 @@
             "sys": 124,
             "dia": 82,
             "puls": 54,
-            "comment": "yoga, plank, ibc, 146, 84"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.09",
+            "time": "06:41",
+            "sys": 146,
+            "dia": 84,
+            "puls": 54,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "146, 84"
         },
         {
             "date": "23.11.09",
@@ -58358,7 +59051,16 @@
             "sys": 125,
             "dia": 73,
             "puls": 59,
-            "comment": "rad, 138, 77"
+            "comment": "rad, "
+        },
+        {
+            "date": "23.11.09",
+            "time": "20:10",
+            "sys": 138,
+            "dia": 77,
+            "puls": 59,
+            "comment": "rad, ",
+            "xxx": "138, 77"
         },
         {
             "date": "23.11.09",
@@ -58382,7 +59084,16 @@
             "sys": 134,
             "dia": 72,
             "puls": 52,
-            "comment": "yoga, plank, ibc, 141, 90"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.10",
+            "time": "06:16",
+            "sys": 141,
+            "dia": 90,
+            "puls": 52,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "141, 90"
         },
         {
             "date": "23.11.10",
@@ -58430,7 +59141,16 @@
             "sys": 130,
             "dia": 81,
             "puls": 51,
-            "comment": "yoga, plank, ibc, 143, 75"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.11",
+            "time": "07:38",
+            "sys": 143,
+            "dia": 75,
+            "puls": 51,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "143, 75"
         },
         {
             "date": "23.11.11",
@@ -58462,7 +59182,16 @@
             "sys": 130,
             "dia": 74,
             "puls": 56,
-            "comment": "137, 78"
+            "comment": ""
+        },
+        {
+            "date": "23.11.11",
+            "time": "20:09",
+            "sys": 137,
+            "dia": 78,
+            "puls": 56,
+            "comment": "",
+            "xxx": "137, 78"
         },
         {
             "date": "23.11.11",
@@ -58478,7 +59207,16 @@
             "sys": 144,
             "dia": 83,
             "puls": 56,
-            "comment": "yoga, plank, ibc, 153, 87"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.12",
+            "time": "10:47",
+            "sys": 153,
+            "dia": 87,
+            "puls": 56,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "153, 87"
         },
         {
             "date": "23.11.12",
@@ -58486,7 +59224,16 @@
             "sys": 138,
             "dia": 85,
             "puls": 55,
-            "comment": "139, 82"
+            "comment": ""
+        },
+        {
+            "date": "23.11.12",
+            "time": "10:48",
+            "sys": 139,
+            "dia": 82,
+            "puls": 55,
+            "comment": "",
+            "xxx": "139, 82"
         },
         {
             "date": "23.11.12",
@@ -58494,7 +59241,16 @@
             "sys": 138,
             "dia": 82,
             "puls": 56,
-            "comment": "151, 81"
+            "comment": ""
+        },
+        {
+            "date": "23.11.12",
+            "time": "10:49",
+            "sys": 151,
+            "dia": 81,
+            "puls": 56,
+            "comment": "",
+            "xxx": "151, 81"
         },
         {
             "date": "23.11.12",
@@ -58558,7 +59314,16 @@
             "sys": 121,
             "dia": 68,
             "puls": 60,
-            "comment": "138, 69"
+            "comment": ""
+        },
+        {
+            "date": "23.11.13",
+            "time": "20:20",
+            "sys": 138,
+            "dia": 69,
+            "puls": 60,
+            "comment": "",
+            "xxx": "138, 69"
         },
         {
             "date": "23.11.13",
@@ -58574,7 +59339,16 @@
             "sys": 132,
             "dia": 81,
             "puls": 50,
-            "comment": "yoga, ibc, 135, 89"
+            "comment": "yoga, ibc, "
+        },
+        {
+            "date": "23.11.14",
+            "time": "06:32",
+            "sys": 135,
+            "dia": 89,
+            "puls": 50,
+            "comment": "yoga, ibc, ",
+            "xxx": "135, 89"
         },
         {
             "date": "23.11.14",
@@ -58670,7 +59444,7 @@
             "sys": 131,
             "dia": 81,
             "puls": 55,
-            "comment": "yoga, plank"
+            "comment": "yoga, plank, ibc"
         },
         {
             "date": "23.11.16",
@@ -58678,7 +59452,7 @@
             "sys": 126,
             "dia": 78,
             "puls": 60,
-            "comment": "ibc"
+            "comment": ""
         },
         {
             "date": "23.11.16",
@@ -58686,7 +59460,16 @@
             "sys": 123,
             "dia": 73,
             "puls": 58,
-            "comment": "137, 75"
+            "comment": ""
+        },
+        {
+            "date": "23.11.16",
+            "time": "05:58",
+            "sys": 137,
+            "dia": 75,
+            "puls": 58,
+            "comment": "",
+            "xxx": "137, 75"
         },
         {
             "date": "23.11.16",
@@ -58718,7 +59501,7 @@
             "sys": 134,
             "dia": 79,
             "puls": 58,
-            "comment": "yoga, plank"
+            "comment": "yoga, plank, ibc"
         },
         {
             "date": "23.11.17",
@@ -58726,7 +59509,7 @@
             "sys": 125,
             "dia": 82,
             "puls": 58,
-            "comment": "ibc"
+            "comment": ""
         },
         {
             "date": "23.11.17",
@@ -58774,7 +59557,16 @@
             "sys": 129,
             "dia": 87,
             "puls": 60,
-            "comment": "135, 91"
+            "comment": ""
+        },
+        {
+            "date": "23.11.18",
+            "time": "05:48",
+            "sys": 135,
+            "dia": 91,
+            "puls": 60,
+            "comment": "",
+            "xxx": "135, 91"
         },
         {
             "date": "23.11.18",
@@ -58798,7 +59590,16 @@
             "sys": 124,
             "dia": 79,
             "puls": 60,
-            "comment": "136, 87"
+            "comment": ""
+        },
+        {
+            "date": "23.11.19",
+            "time": "20:05",
+            "sys": 136,
+            "dia": 87,
+            "puls": 60,
+            "comment": "",
+            "xxx": "136, 87"
         },
         {
             "date": "23.11.19",
@@ -58806,7 +59607,16 @@
             "sys": 121,
             "dia": 72,
             "puls": 62,
-            "comment": "136, 82"
+            "comment": ""
+        },
+        {
+            "date": "23.11.19",
+            "time": "20:06",
+            "sys": 136,
+            "dia": 82,
+            "puls": 62,
+            "comment": "",
+            "xxx": "136, 82"
         },
         {
             "date": "23.11.20",
@@ -58814,7 +59624,16 @@
             "sys": 127,
             "dia": 84,
             "puls": 55,
-            "comment": "yoga, plank, ibc, 145, 95"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.20",
+            "time": "06:57",
+            "sys": 145,
+            "dia": 95,
+            "puls": 55,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "145, 95"
         },
         {
             "date": "23.11.20",
@@ -58822,7 +59641,16 @@
             "sys": 126,
             "dia": 81,
             "puls": 53,
-            "comment": "143, 80"
+            "comment": ""
+        },
+        {
+            "date": "23.11.20",
+            "time": "06:58",
+            "sys": 143,
+            "dia": 80,
+            "puls": 53,
+            "comment": "",
+            "xxx": "143, 80"
         },
         {
             "date": "23.11.20",
@@ -58830,7 +59658,16 @@
             "sys": 128,
             "dia": 86,
             "puls": 54,
-            "comment": "132, 87"
+            "comment": ""
+        },
+        {
+            "date": "23.11.20",
+            "time": "06:59",
+            "sys": 132,
+            "dia": 87,
+            "puls": 54,
+            "comment": "",
+            "xxx": "132, 87"
         },
         {
             "date": "23.11.20",
@@ -58974,7 +59811,16 @@
             "sys": 122,
             "dia": 78,
             "puls": 54,
-            "comment": "134, 73"
+            "comment": ""
+        },
+        {
+            "date": "23.11.23",
+            "time": "05:49",
+            "sys": 134,
+            "dia": 73,
+            "puls": 54,
+            "comment": "",
+            "xxx": "134, 73"
         },
         {
             "date": "23.11.23",
@@ -59006,7 +59852,16 @@
             "sys": 129,
             "dia": 81,
             "puls": 49,
-            "comment": "yoga, plank, ibc, 141, 83"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.24",
+            "time": "06:37",
+            "sys": 141,
+            "dia": 83,
+            "puls": 49,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "141, 83"
         },
         {
             "date": "23.11.24",
@@ -59038,7 +59893,16 @@
             "sys": 123,
             "dia": 83,
             "puls": 61,
-            "comment": "144, 84"
+            "comment": ""
+        },
+        {
+            "date": "23.11.24",
+            "time": "20:06",
+            "sys": 144,
+            "dia": 84,
+            "puls": 61,
+            "comment": "",
+            "xxx": "144, 84"
         },
         {
             "date": "23.11.24",
@@ -59054,7 +59918,16 @@
             "sys": 126,
             "dia": 72,
             "puls": 56,
-            "comment": "yoga, plank, 137, 76"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "23.11.25",
+            "time": "07:10",
+            "sys": 137,
+            "dia": 76,
+            "puls": 56,
+            "comment": "yoga, plank, ",
+            "xxx": "137, 76"
         },
         {
             "date": "23.11.25",
@@ -59150,7 +60023,16 @@
             "sys": 132,
             "dia": 82,
             "puls": 49,
-            "comment": "yoga, plank, ibc, 140, 84"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.27",
+            "time": "06:48",
+            "sys": 140,
+            "dia": 84,
+            "puls": 49,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "140, 84"
         },
         {
             "date": "23.11.27",
@@ -59166,7 +60048,16 @@
             "sys": 122,
             "dia": 82,
             "puls": 53,
-            "comment": "134, 86"
+            "comment": ""
+        },
+        {
+            "date": "23.11.27",
+            "time": "06:50",
+            "sys": 134,
+            "dia": 86,
+            "puls": 53,
+            "comment": "",
+            "xxx": "134, 86"
         },
         {
             "date": "23.11.27",
@@ -59182,7 +60073,16 @@
             "sys": 131,
             "dia": 77,
             "puls": 58,
-            "comment": "137, 79"
+            "comment": ""
+        },
+        {
+            "date": "23.11.27",
+            "time": "20:08",
+            "sys": 137,
+            "dia": 79,
+            "puls": 58,
+            "comment": "",
+            "xxx": "137, 79"
         },
         {
             "date": "23.11.27",
@@ -59198,7 +60098,16 @@
             "sys": 130,
             "dia": 82,
             "puls": 49,
-            "comment": "yoga, plank, ibc, 140, 90"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.11.28",
+            "time": "06:29",
+            "sys": 140,
+            "dia": 90,
+            "puls": 49,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "140, 90"
         },
         {
             "date": "23.11.28",
@@ -59230,7 +60139,16 @@
             "sys": 118,
             "dia": 79,
             "puls": 61,
-            "comment": "135, 79"
+            "comment": ""
+        },
+        {
+            "date": "23.11.28",
+            "time": "20:28",
+            "sys": 135,
+            "dia": 79,
+            "puls": 61,
+            "comment": "",
+            "xxx": "135, 79"
         },
         {
             "date": "23.11.28",
@@ -59254,7 +60172,7 @@
             "sys": 133,
             "dia": 81,
             "puls": 49,
-            "comment": "akupunktur"
+            "comment": ""
         },
         {
             "date": "23.11.29",
@@ -59270,7 +60188,7 @@
             "sys": 129,
             "dia": 76,
             "puls": 64,
-            "comment": "rad"
+            "comment": "rad, akupunktur"
         },
         {
             "date": "23.11.29",
@@ -59318,7 +60236,16 @@
             "sys": 136,
             "dia": 83,
             "puls": 52,
-            "comment": "yoga, plank, ibc, 137, 93"
+            "comment": "yoga, plank, ibc, "
+        },
+        {
+            "date": "23.12.01",
+            "time": "07:04",
+            "sys": 137,
+            "dia": 93,
+            "puls": 52,
+            "comment": "yoga, plank, ibc, ",
+            "xxx": "137, 93"
         },
         {
             "date": "23.12.01",
@@ -59334,7 +60261,16 @@
             "sys": 129,
             "dia": 88,
             "puls": 54,
-            "comment": "139, 89"
+            "comment": ""
+        },
+        {
+            "date": "23.12.01",
+            "time": "07:06",
+            "sys": 139,
+            "dia": 89,
+            "puls": 54,
+            "comment": "",
+            "xxx": "139, 89"
         },
         {
             "date": "23.12.01",
@@ -59342,7 +60278,16 @@
             "sys": 127,
             "dia": 80,
             "puls": 59,
-            "comment": "140, 76"
+            "comment": ""
+        },
+        {
+            "date": "23.12.01",
+            "time": "20:13",
+            "sys": 140,
+            "dia": 76,
+            "puls": 59,
+            "comment": "",
+            "xxx": "140, 76"
         },
         {
             "date": "23.12.01",
@@ -59366,7 +60311,16 @@
             "sys": 131,
             "dia": 85,
             "puls": 52,
-            "comment": "yoga, plank, 144, 83"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "23.12.02",
+            "time": "06:34",
+            "sys": 144,
+            "dia": 83,
+            "puls": 52,
+            "comment": "yoga, plank, ",
+            "xxx": "144, 83"
         },
         {
             "date": "23.12.02",
@@ -59390,7 +60344,16 @@
             "sys": 139,
             "dia": 81,
             "puls": 59,
-            "comment": "138, 89"
+            "comment": ""
+        },
+        {
+            "date": "23.12.02",
+            "time": "22:02",
+            "sys": 138,
+            "dia": 89,
+            "puls": 59,
+            "comment": "",
+            "xxx": "138, 89"
         },
         {
             "date": "23.12.02",
@@ -59398,7 +60361,16 @@
             "sys": 133,
             "dia": 84,
             "puls": 60,
-            "comment": "150, 86"
+            "comment": ""
+        },
+        {
+            "date": "23.12.02",
+            "time": "22:03",
+            "sys": 150,
+            "dia": 86,
+            "puls": 60,
+            "comment": "",
+            "xxx": "150, 86"
         },
         {
             "date": "23.12.02",
@@ -59446,7 +60418,16 @@
             "sys": 129,
             "dia": 83,
             "puls": 60,
-            "comment": "142, 84"
+            "comment": ""
+        },
+        {
+            "date": "23.12.03",
+            "time": "21:00",
+            "sys": 142,
+            "dia": 84,
+            "puls": 60,
+            "comment": "",
+            "xxx": "142, 84"
         },
         {
             "date": "23.12.03",
@@ -59462,7 +60443,16 @@
             "sys": 119,
             "dia": 81,
             "puls": 52,
-            "comment": "yoga, plank, 130, 87"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "23.12.04",
+            "time": "06:45",
+            "sys": 130,
+            "dia": 87,
+            "puls": 52,
+            "comment": "yoga, plank, ",
+            "xxx": "130, 87"
         },
         {
             "date": "23.12.04",
@@ -59486,7 +60476,16 @@
             "sys": 134,
             "dia": 81,
             "puls": 61,
-            "comment": "143, 83"
+            "comment": ""
+        },
+        {
+            "date": "23.12.04",
+            "time": "20:53",
+            "sys": 143,
+            "dia": 83,
+            "puls": 61,
+            "comment": "",
+            "xxx": "143, 83"
         },
         {
             "date": "23.12.04",
@@ -59494,7 +60493,16 @@
             "sys": 136,
             "dia": 77,
             "puls": 63,
-            "comment": "137, 87"
+            "comment": ""
+        },
+        {
+            "date": "23.12.04",
+            "time": "20:54",
+            "sys": 137,
+            "dia": 87,
+            "puls": 63,
+            "comment": "",
+            "xxx": "137, 87"
         },
         {
             "date": "23.12.04",
@@ -59502,7 +60510,16 @@
             "sys": 138,
             "dia": 76,
             "puls": 64,
-            "comment": "129, 90"
+            "comment": ""
+        },
+        {
+            "date": "23.12.04",
+            "time": "20:55",
+            "sys": 129,
+            "dia": 90,
+            "puls": 64,
+            "comment": "",
+            "xxx": "129, 90"
         },
         {
             "date": "23.12.05",
@@ -59510,7 +60527,16 @@
             "sys": 122,
             "dia": 85,
             "puls": 71,
-            "comment": "144, 83"
+            "comment": ""
+        },
+        {
+            "date": "23.12.05",
+            "time": "06:53",
+            "sys": 144,
+            "dia": 83,
+            "puls": 71,
+            "comment": "",
+            "xxx": "144, 83"
         },
         {
             "date": "23.12.05",
@@ -59518,7 +60544,16 @@
             "sys": 121,
             "dia": 86,
             "puls": 64,
-            "comment": "138, 90"
+            "comment": ""
+        },
+        {
+            "date": "23.12.05",
+            "time": "06:54",
+            "sys": 138,
+            "dia": 90,
+            "puls": 64,
+            "comment": "",
+            "xxx": "138, 90"
         },
         {
             "date": "23.12.05",
@@ -59558,7 +60593,16 @@
             "sys": 131,
             "dia": 86,
             "puls": 67,
-            "comment": "corona, 152, 86"
+            "comment": "corona, "
+        },
+        {
+            "date": "23.12.06",
+            "time": "06:11",
+            "sys": 152,
+            "dia": 86,
+            "puls": 67,
+            "comment": "corona, ",
+            "xxx": "152, 86"
         },
         {
             "date": "23.12.06",
@@ -59726,7 +60770,16 @@
             "sys": 126,
             "dia": 75,
             "puls": 55,
-            "comment": "yoga, plank, 140, 75"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "23.12.14",
+            "time": "05:44",
+            "sys": 140,
+            "dia": 75,
+            "puls": 55,
+            "comment": "yoga, plank, ",
+            "xxx": "140, 75"
         },
         {
             "date": "23.12.14",
@@ -59774,7 +60827,16 @@
             "sys": 121,
             "dia": 78,
             "puls": 62,
-            "comment": "run, ibc, 129, 88"
+            "comment": "run, ibc, "
+        },
+        {
+            "date": "23.12.15",
+            "time": "06:34",
+            "sys": 129,
+            "dia": 88,
+            "puls": 62,
+            "comment": "run, ibc, ",
+            "xxx": "129, 88"
         },
         {
             "date": "23.12.15",
@@ -59782,7 +60844,16 @@
             "sys": 127,
             "dia": 73,
             "puls": 62,
-            "comment": "114, 86"
+            "comment": ""
+        },
+        {
+            "date": "23.12.15",
+            "time": "06:35",
+            "sys": 114,
+            "dia": 86,
+            "puls": 62,
+            "comment": "",
+            "xxx": "114, 86"
         },
         {
             "date": "23.12.15",
@@ -59918,7 +60989,16 @@
             "sys": 133,
             "dia": 74,
             "puls": 58,
-            "comment": "run, ibc, 124, 86"
+            "comment": "run, ibc, "
+        },
+        {
+            "date": "23.12.18",
+            "time": "06:46",
+            "sys": 124,
+            "dia": 86,
+            "puls": 58,
+            "comment": "run, ibc, ",
+            "xxx": "124, 86"
         },
         {
             "date": "23.12.18",
@@ -60246,7 +61326,16 @@
             "sys": 134,
             "dia": 80,
             "puls": 64,
-            "comment": "150, 82"
+            "comment": ""
+        },
+        {
+            "date": "24.01.01",
+            "time": "08:17",
+            "sys": 150,
+            "dia": 82,
+            "puls": 64,
+            "comment": "",
+            "xxx": "150, 82"
         },
         {
             "date": "24.01.01",
@@ -60254,7 +61343,16 @@
             "sys": 131,
             "dia": 85,
             "puls": 64,
-            "comment": "run, ibc, 147, 87"
+            "comment": "run, ibc, "
+        },
+        {
+            "date": "24.01.01",
+            "time": "20:10",
+            "sys": 147,
+            "dia": 87,
+            "puls": 64,
+            "comment": "run, ibc, ",
+            "xxx": "147, 87"
         },
         {
             "date": "24.01.01",
@@ -60278,7 +61376,16 @@
             "sys": 127,
             "dia": 88,
             "puls": 59,
-            "comment": "yoga, plank, 136, 90"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "24.01.02",
+            "time": "06:42",
+            "sys": 136,
+            "dia": 90,
+            "puls": 59,
+            "comment": "yoga, plank, ",
+            "xxx": "136, 90"
         },
         {
             "date": "24.01.02",
@@ -60302,7 +61409,16 @@
             "sys": 127,
             "dia": 86,
             "puls": 64,
-            "comment": "146, 82"
+            "comment": ""
+        },
+        {
+            "date": "24.01.02",
+            "time": "20:10",
+            "sys": 146,
+            "dia": 82,
+            "puls": 64,
+            "comment": "",
+            "xxx": "146, 82"
         },
         {
             "date": "24.01.02",
@@ -60374,7 +61490,16 @@
             "sys": 132,
             "dia": 75,
             "puls": 65,
-            "comment": "yoga, plank, 158, 82"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "24.01.04",
+            "time": "06:54",
+            "sys": 158,
+            "dia": 82,
+            "puls": 65,
+            "comment": "yoga, plank, ",
+            "xxx": "158, 82"
         },
         {
             "date": "24.01.04",
@@ -60390,7 +61515,16 @@
             "sys": 117,
             "dia": 81,
             "puls": 67,
-            "comment": "125, 100"
+            "comment": ""
+        },
+        {
+            "date": "24.01.04",
+            "time": "06:56",
+            "sys": 125,
+            "dia": 100,
+            "puls": 67,
+            "comment": "",
+            "xxx": "125, 100"
         },
         {
             "date": "24.01.04",
@@ -60470,7 +61604,16 @@
             "sys": 126,
             "dia": 77,
             "puls": 60,
-            "comment": "145, 75"
+            "comment": ""
+        },
+        {
+            "date": "24.01.06",
+            "time": "20:18",
+            "sys": 145,
+            "dia": 75,
+            "puls": 60,
+            "comment": "",
+            "xxx": "145, 75"
         },
         {
             "date": "24.01.06",
@@ -60478,7 +61621,16 @@
             "sys": 123,
             "dia": 84,
             "puls": 70,
-            "comment": "143, 85"
+            "comment": ""
+        },
+        {
+            "date": "24.01.06",
+            "time": "20:19",
+            "sys": 143,
+            "dia": 85,
+            "puls": 70,
+            "comment": "",
+            "xxx": "143, 85"
         },
         {
             "date": "24.01.06",
@@ -60494,7 +61646,16 @@
             "sys": 143,
             "dia": 78,
             "puls": 53,
-            "comment": "146, 90"
+            "comment": ""
+        },
+        {
+            "date": "24.01.07",
+            "time": "08:25",
+            "sys": 146,
+            "dia": 90,
+            "puls": 53,
+            "comment": "",
+            "xxx": "146, 90"
         },
         {
             "date": "24.01.07",
@@ -60510,7 +61671,16 @@
             "sys": 144,
             "dia": 81,
             "puls": 53,
-            "comment": "150, 84"
+            "comment": ""
+        },
+        {
+            "date": "24.01.07",
+            "time": "08:27",
+            "sys": 150,
+            "dia": 84,
+            "puls": 53,
+            "comment": "",
+            "xxx": "150, 84"
         },
         {
             "date": "24.01.07",
@@ -60518,7 +61688,16 @@
             "sys": 139,
             "dia": 84,
             "puls": 52,
-            "comment": "147, 80"
+            "comment": ""
+        },
+        {
+            "date": "24.01.07",
+            "time": "20:24",
+            "sys": 147,
+            "dia": 80,
+            "puls": 52,
+            "comment": "",
+            "xxx": "147, 80"
         },
         {
             "date": "24.01.07",
@@ -60542,7 +61721,16 @@
             "sys": 133,
             "dia": 84,
             "puls": 57,
-            "comment": "run, ibc, 134, 90"
+            "comment": "run, ibc, "
+        },
+        {
+            "date": "24.01.08",
+            "time": "07:17",
+            "sys": 134,
+            "dia": 90,
+            "puls": 57,
+            "comment": "run, ibc, ",
+            "xxx": "134, 90"
         },
         {
             "date": "24.01.08",
@@ -60550,7 +61738,16 @@
             "sys": 118,
             "dia": 79,
             "puls": 57,
-            "comment": "145, 79"
+            "comment": ""
+        },
+        {
+            "date": "24.01.08",
+            "time": "07:18",
+            "sys": 145,
+            "dia": 79,
+            "puls": 57,
+            "comment": "",
+            "xxx": "145, 79"
         },
         {
             "date": "24.01.08",
@@ -60630,7 +61827,16 @@
             "sys": 130,
             "dia": 63,
             "puls": 64,
-            "comment": "138, 73"
+            "comment": ""
+        },
+        {
+            "date": "24.01.09",
+            "time": "20:13",
+            "sys": 138,
+            "dia": 73,
+            "puls": 64,
+            "comment": "",
+            "xxx": "138, 73"
         },
         {
             "date": "24.01.10",
@@ -60974,7 +62180,16 @@
             "sys": 126,
             "dia": 81,
             "puls": 58,
-            "comment": "plank, yoga, 145, 75"
+            "comment": "plank, yoga, "
+        },
+        {
+            "date": "24.01.18",
+            "time": "06:39",
+            "sys": 145,
+            "dia": 75,
+            "puls": 58,
+            "comment": "plank, yoga, ",
+            "xxx": "145, 75"
         },
         {
             "date": "24.01.18",
@@ -60998,7 +62213,16 @@
             "sys": 132,
             "dia": 73,
             "puls": 71,
-            "comment": "sauna, 145, 81"
+            "comment": "sauna, "
+        },
+        {
+            "date": "24.01.18",
+            "time": "22:27",
+            "sys": 145,
+            "dia": 81,
+            "puls": 71,
+            "comment": "sauna, ",
+            "xxx": "145, 81"
         },
         {
             "date": "24.01.18",
@@ -61102,7 +62326,16 @@
             "sys": 123,
             "dia": 76,
             "puls": 58,
-            "comment": "137, 69"
+            "comment": ""
+        },
+        {
+            "date": "24.01.20",
+            "time": "20:08",
+            "sys": 137,
+            "dia": 69,
+            "puls": 58,
+            "comment": "",
+            "xxx": "137, 69"
         },
         {
             "date": "24.01.20",
@@ -61166,7 +62399,16 @@
             "sys": 118,
             "dia": 79,
             "puls": 56,
-            "comment": "plank, yoga, 138, 80"
+            "comment": "plank, yoga, "
+        },
+        {
+            "date": "24.01.22",
+            "time": "06:23",
+            "sys": 138,
+            "dia": 80,
+            "puls": 56,
+            "comment": "plank, yoga, ",
+            "xxx": "138, 80"
         },
         {
             "date": "24.01.22",
@@ -61270,7 +62512,16 @@
             "sys": 122,
             "dia": 78,
             "puls": 61,
-            "comment": "138, 72"
+            "comment": ""
+        },
+        {
+            "date": "24.01.24",
+            "time": "20:43",
+            "sys": 138,
+            "dia": 72,
+            "puls": 61,
+            "comment": "",
+            "xxx": "138, 72"
         },
         {
             "date": "24.01.24",
@@ -61366,7 +62617,16 @@
             "sys": 131,
             "dia": 73,
             "puls": 63,
-            "comment": "144, 73"
+            "comment": ""
+        },
+        {
+            "date": "24.01.26",
+            "time": "21:59",
+            "sys": 144,
+            "dia": 73,
+            "puls": 63,
+            "comment": "",
+            "xxx": "144, 73"
         },
         {
             "date": "24.01.26",
@@ -61550,7 +62810,16 @@
             "sys": 126,
             "dia": 77,
             "puls": 63,
-            "comment": "137, 82"
+            "comment": ""
+        },
+        {
+            "date": "24.01.30",
+            "time": "20:38",
+            "sys": 137,
+            "dia": 82,
+            "puls": 63,
+            "comment": "",
+            "xxx": "137, 82"
         },
         {
             "date": "24.01.30",
@@ -61598,7 +62867,16 @@
             "sys": 132,
             "dia": 79,
             "puls": 64,
-            "comment": "rad, 141, 74"
+            "comment": "rad, "
+        },
+        {
+            "date": "24.01.31",
+            "time": "20:19",
+            "sys": 141,
+            "dia": 74,
+            "puls": 64,
+            "comment": "rad, ",
+            "xxx": "141, 74"
         },
         {
             "date": "24.01.31",
@@ -61654,7 +62932,16 @@
             "sys": 116,
             "dia": 81,
             "puls": 69,
-            "comment": "139, 69"
+            "comment": ""
+        },
+        {
+            "date": "24.02.01",
+            "time": "20:12",
+            "sys": 139,
+            "dia": 69,
+            "puls": 69,
+            "comment": "",
+            "xxx": "139, 69"
         },
         {
             "date": "24.02.01",
@@ -61886,7 +63173,16 @@
             "sys": 128,
             "dia": 72,
             "puls": 60,
-            "comment": "swim, 143, 75"
+            "comment": "swim, "
+        },
+        {
+            "date": "24.02.06",
+            "time": "20:21",
+            "sys": 143,
+            "dia": 75,
+            "puls": 60,
+            "comment": "swim, ",
+            "xxx": "143, 75"
         },
         {
             "date": "24.02.06",
@@ -61894,7 +63190,16 @@
             "sys": 125,
             "dia": 79,
             "puls": 63,
-            "comment": "134, 85"
+            "comment": ""
+        },
+        {
+            "date": "24.02.06",
+            "time": "20:22",
+            "sys": 134,
+            "dia": 85,
+            "puls": 63,
+            "comment": "",
+            "xxx": "134, 85"
         },
         {
             "date": "24.02.06",
@@ -61902,7 +63207,16 @@
             "sys": 123,
             "dia": 72,
             "puls": 62,
-            "comment": "142, 84"
+            "comment": ""
+        },
+        {
+            "date": "24.02.06",
+            "time": "20:23",
+            "sys": 142,
+            "dia": 84,
+            "puls": 62,
+            "comment": "",
+            "xxx": "142, 84"
         },
         {
             "date": "24.02.07",
@@ -61910,7 +63224,16 @@
             "sys": 128,
             "dia": 79,
             "puls": 56,
-            "comment": "plank, 134, 84"
+            "comment": "plank, "
+        },
+        {
+            "date": "24.02.07",
+            "time": "06:35",
+            "sys": 134,
+            "dia": 84,
+            "puls": 56,
+            "comment": "plank, ",
+            "xxx": "134, 84"
         },
         {
             "date": "24.02.07",
@@ -61990,7 +63313,16 @@
             "sys": 114,
             "dia": 71,
             "puls": 62,
-            "comment": "130, 59"
+            "comment": ""
+        },
+        {
+            "date": "24.02.08",
+            "time": "20:12",
+            "sys": 130,
+            "dia": 59,
+            "puls": 62,
+            "comment": "",
+            "xxx": "130, 59"
         },
         {
             "date": "24.02.08",
@@ -62030,7 +63362,16 @@
             "sys": 123,
             "dia": 77,
             "puls": 60,
-            "comment": "137, 71"
+            "comment": ""
+        },
+        {
+            "date": "24.02.09",
+            "time": "20:09",
+            "sys": 137,
+            "dia": 71,
+            "puls": 60,
+            "comment": "",
+            "xxx": "137, 71"
         },
         {
             "date": "24.02.09",
@@ -62078,7 +63419,16 @@
             "sys": 132,
             "dia": 82,
             "puls": 69,
-            "comment": "143, 86"
+            "comment": ""
+        },
+        {
+            "date": "24.02.10",
+            "time": "20:03",
+            "sys": 143,
+            "dia": 86,
+            "puls": 69,
+            "comment": "",
+            "xxx": "143, 86"
         },
         {
             "date": "24.02.10",
@@ -62126,7 +63476,16 @@
             "sys": 121,
             "dia": 71,
             "puls": 62,
-            "comment": "137, 81"
+            "comment": ""
+        },
+        {
+            "date": "24.02.11",
+            "time": "20:15",
+            "sys": 137,
+            "dia": 81,
+            "puls": 62,
+            "comment": "",
+            "xxx": "137, 81"
         },
         {
             "date": "24.02.11",
@@ -62174,7 +63533,16 @@
             "sys": 123,
             "dia": 69,
             "puls": 60,
-            "comment": "136, 74"
+            "comment": ""
+        },
+        {
+            "date": "24.02.12",
+            "time": "20:06",
+            "sys": 136,
+            "dia": 74,
+            "puls": 60,
+            "comment": "",
+            "xxx": "136, 74"
         },
         {
             "date": "24.02.12",
@@ -62830,7 +64198,16 @@
             "sys": 118,
             "dia": 60,
             "puls": 70,
-            "comment": "134, 58"
+            "comment": ""
+        },
+        {
+            "date": "24.02.26",
+            "time": "20:09",
+            "sys": 134,
+            "dia": 58,
+            "puls": 70,
+            "comment": "",
+            "xxx": "134, 58"
         },
         {
             "date": "24.02.26",
@@ -63238,7 +64615,16 @@
             "sys": 114,
             "dia": 77,
             "puls": 58,
-            "comment": "134, 86"
+            "comment": ""
+        },
+        {
+            "date": "24.03.07",
+            "time": "05:42",
+            "sys": 134,
+            "dia": 86,
+            "puls": 58,
+            "comment": "",
+            "xxx": "134, 86"
         },
         {
             "date": "24.03.07",
@@ -63374,7 +64760,16 @@
             "sys": 125,
             "dia": 82,
             "puls": 58,
-            "comment": "plank, 137, 74"
+            "comment": "plank, "
+        },
+        {
+            "date": "24.03.10",
+            "time": "07:27",
+            "sys": 137,
+            "dia": 74,
+            "puls": 58,
+            "comment": "plank, ",
+            "xxx": "137, 74"
         },
         {
             "date": "24.03.10",
@@ -63398,7 +64793,16 @@
             "sys": 126,
             "dia": 72,
             "puls": 57,
-            "comment": "rad, 138, 65"
+            "comment": "rad, "
+        },
+        {
+            "date": "24.03.10",
+            "time": "20:24",
+            "sys": 138,
+            "dia": 65,
+            "puls": 57,
+            "comment": "rad, ",
+            "xxx": "138, 65"
         },
         {
             "date": "24.03.10",
@@ -63486,7 +64890,16 @@
             "sys": 124,
             "dia": 76,
             "puls": 55,
-            "comment": "139, 74"
+            "comment": ""
+        },
+        {
+            "date": "24.03.12",
+            "time": "06:38",
+            "sys": 139,
+            "dia": 74,
+            "puls": 55,
+            "comment": "",
+            "xxx": "139, 74"
         },
         {
             "date": "24.03.13",
@@ -63526,7 +64939,16 @@
             "sys": 115,
             "dia": 72,
             "puls": 67,
-            "comment": "141, 80"
+            "comment": ""
+        },
+        {
+            "date": "24.03.13",
+            "time": "20:08",
+            "sys": 141,
+            "dia": 80,
+            "puls": 67,
+            "comment": "",
+            "xxx": "141, 80"
         },
         {
             "date": "24.03.13",
@@ -63590,7 +65012,16 @@
             "sys": 121,
             "dia": 68,
             "puls": 57,
-            "comment": "yoga, plank, 145, 75"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "24.03.15",
+            "time": "06:05",
+            "sys": 145,
+            "dia": 75,
+            "puls": 57,
+            "comment": "yoga, plank, ",
+            "xxx": "145, 75"
         },
         {
             "date": "24.03.15",
@@ -63782,7 +65213,16 @@
             "sys": 120,
             "dia": 79,
             "puls": 56,
-            "comment": "plank, 142, 72"
+            "comment": "plank, "
+        },
+        {
+            "date": "24.03.19",
+            "time": "05:44",
+            "sys": 142,
+            "dia": 72,
+            "puls": 56,
+            "comment": "plank, ",
+            "xxx": "142, 72"
         },
         {
             "date": "24.03.19",
@@ -63798,7 +65238,7 @@
             "sys": 127,
             "dia": 72,
             "puls": 55,
-            "comment": "rad, see"
+            "comment": ""
         },
         {
             "date": "24.03.20",
@@ -63806,7 +65246,7 @@
             "sys": 134,
             "dia": 83,
             "puls": 57,
-            "comment": "plank"
+            "comment": "plank, rad, see"
         },
         {
             "date": "24.03.20",
@@ -63822,7 +65262,7 @@
             "sys": 134,
             "dia": 66,
             "puls": 56,
-            "comment": "swim"
+            "comment": ""
         },
         {
             "date": "24.03.21",
@@ -63830,7 +65270,7 @@
             "sys": 124,
             "dia": 83,
             "puls": 59,
-            "comment": "plank"
+            "comment": "plank, swim"
         },
         {
             "date": "24.03.21",
@@ -63902,7 +65342,16 @@
             "sys": 126,
             "dia": 74,
             "puls": 57,
-            "comment": "139, 83"
+            "comment": ""
+        },
+        {
+            "date": "24.03.22",
+            "time": "21:21",
+            "sys": 139,
+            "dia": 83,
+            "puls": 57,
+            "comment": "",
+            "xxx": "139, 83"
         },
         {
             "date": "24.03.22",
@@ -63966,7 +65415,16 @@
             "sys": 114,
             "dia": 66,
             "puls": 61,
-            "comment": "139, 77"
+            "comment": ""
+        },
+        {
+            "date": "24.03.23",
+            "time": "20:14",
+            "sys": 139,
+            "dia": 77,
+            "puls": 61,
+            "comment": "",
+            "xxx": "139, 77"
         },
         {
             "date": "24.03.24",
@@ -63998,7 +65456,16 @@
             "sys": 124,
             "dia": 74,
             "puls": 50,
-            "comment": "165, 132"
+            "comment": ""
+        },
+        {
+            "date": "24.03.24",
+            "time": "20:10",
+            "sys": 165,
+            "dia": 132,
+            "puls": 50,
+            "comment": "",
+            "xxx": "165, 132"
         },
         {
             "date": "24.03.24",
@@ -64062,7 +65529,16 @@
             "sys": 121,
             "dia": 79,
             "puls": 57,
-            "comment": "145, 74"
+            "comment": ""
+        },
+        {
+            "date": "24.03.26",
+            "time": "05:48",
+            "sys": 145,
+            "dia": 74,
+            "puls": 57,
+            "comment": "",
+            "xxx": "145, 74"
         },
         {
             "date": "24.03.26",
@@ -64142,7 +65618,16 @@
             "sys": 123,
             "dia": 80,
             "puls": 60,
-            "comment": "yoga, plank, 136, 75"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "24.03.28",
+            "time": "06:09",
+            "sys": 136,
+            "dia": 75,
+            "puls": 60,
+            "comment": "yoga, plank, ",
+            "xxx": "136, 75"
         },
         {
             "date": "24.03.28",
@@ -66110,7 +67595,16 @@
             "sys": 136,
             "dia": 88,
             "puls": 63,
-            "comment": "148, 96"
+            "comment": ""
+        },
+        {
+            "date": "24.06.02",
+            "time": "20:40",
+            "sys": 148,
+            "dia": 96,
+            "puls": 63,
+            "comment": "",
+            "xxx": "148, 96"
         },
         {
             "date": "24.06.02",
@@ -66206,7 +67700,16 @@
             "sys": 135,
             "dia": 82,
             "puls": 55,
-            "comment": "yoga, plank, 142, 81"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "24.06.05",
+            "time": "07:15",
+            "sys": 142,
+            "dia": 81,
+            "puls": 55,
+            "comment": "yoga, plank, ",
+            "xxx": "142, 81"
         },
         {
             "date": "24.06.05",
@@ -66350,7 +67853,16 @@
             "sys": 131,
             "dia": 83,
             "puls": 57,
-            "comment": "plank, 137, 76"
+            "comment": "plank, "
+        },
+        {
+            "date": "24.06.08",
+            "time": "07:03",
+            "sys": 137,
+            "dia": 76,
+            "puls": 57,
+            "comment": "plank, ",
+            "xxx": "137, 76"
         },
         {
             "date": "24.06.08",
@@ -66382,7 +67894,16 @@
             "sys": 124,
             "dia": 81,
             "puls": 57,
-            "comment": "141, 82"
+            "comment": ""
+        },
+        {
+            "date": "24.06.09",
+            "time": "07:19",
+            "sys": 141,
+            "dia": 82,
+            "puls": 57,
+            "comment": "",
+            "xxx": "141, 82"
         },
         {
             "date": "24.06.09",
@@ -66390,7 +67911,16 @@
             "sys": 120,
             "dia": 83,
             "puls": 60,
-            "comment": "139, 80"
+            "comment": ""
+        },
+        {
+            "date": "24.06.09",
+            "time": "07:20",
+            "sys": 139,
+            "dia": 80,
+            "puls": 60,
+            "comment": "",
+            "xxx": "139, 80"
         },
         {
             "date": "24.06.09",
@@ -66406,7 +67936,16 @@
             "sys": 128,
             "dia": 75,
             "puls": 60,
-            "comment": "141, 85"
+            "comment": ""
+        },
+        {
+            "date": "24.06.09",
+            "time": "20:25",
+            "sys": 141,
+            "dia": 85,
+            "puls": 60,
+            "comment": "",
+            "xxx": "141, 85"
         },
         {
             "date": "24.06.09",
@@ -66414,7 +67953,16 @@
             "sys": 141,
             "dia": 81,
             "puls": 59,
-            "comment": "142, 77"
+            "comment": ""
+        },
+        {
+            "date": "24.06.09",
+            "time": "20:26",
+            "sys": 142,
+            "dia": 77,
+            "puls": 59,
+            "comment": "",
+            "xxx": "142, 77"
         },
         {
             "date": "24.06.10",
@@ -66486,7 +68034,16 @@
             "sys": 111,
             "dia": 73,
             "puls": 59,
-            "comment": "135, 79"
+            "comment": ""
+        },
+        {
+            "date": "24.06.11",
+            "time": "06:40",
+            "sys": 135,
+            "dia": 79,
+            "puls": 59,
+            "comment": "",
+            "xxx": "135, 79"
         },
         {
             "date": "24.06.11",
@@ -66526,7 +68083,16 @@
             "sys": 128,
             "dia": 85,
             "puls": 57,
-            "comment": "137, 80"
+            "comment": ""
+        },
+        {
+            "date": "24.06.12",
+            "time": "06:49",
+            "sys": 137,
+            "dia": 80,
+            "puls": 57,
+            "comment": "",
+            "xxx": "137, 80"
         },
         {
             "date": "24.06.12",
@@ -66542,7 +68108,16 @@
             "sys": 140,
             "dia": 73,
             "puls": 58,
-            "comment": "145, 89"
+            "comment": ""
+        },
+        {
+            "date": "24.06.12",
+            "time": "20:25",
+            "sys": 145,
+            "dia": 89,
+            "puls": 58,
+            "comment": "",
+            "xxx": "145, 89"
         },
         {
             "date": "24.06.12",
@@ -66566,7 +68141,16 @@
             "sys": 126,
             "dia": 80,
             "puls": 56,
-            "comment": "plank, 155, 84"
+            "comment": "plank, "
+        },
+        {
+            "date": "24.06.13",
+            "time": "05:42",
+            "sys": 155,
+            "dia": 84,
+            "puls": 56,
+            "comment": "plank, ",
+            "xxx": "155, 84"
         },
         {
             "date": "24.06.13",
@@ -66686,7 +68270,16 @@
             "sys": 137,
             "dia": 83,
             "puls": 54,
-            "comment": "148, 83"
+            "comment": ""
+        },
+        {
+            "date": "24.06.15",
+            "time": "20:54",
+            "sys": 148,
+            "dia": 83,
+            "puls": 54,
+            "comment": "",
+            "xxx": "148, 83"
         },
         {
             "date": "24.06.15",
@@ -66710,7 +68303,16 @@
             "sys": 138,
             "dia": 82,
             "puls": 55,
-            "comment": "plank, 149, 80"
+            "comment": "plank, "
+        },
+        {
+            "date": "24.06.16",
+            "time": "06:22",
+            "sys": 149,
+            "dia": 80,
+            "puls": 55,
+            "comment": "plank, ",
+            "xxx": "149, 80"
         },
         {
             "date": "24.06.16",
@@ -66806,7 +68408,16 @@
             "sys": 137,
             "dia": 80,
             "puls": 50,
-            "comment": "plank, 145, 90"
+            "comment": "plank, "
+        },
+        {
+            "date": "24.06.18",
+            "time": "05:29",
+            "sys": 145,
+            "dia": 90,
+            "puls": 50,
+            "comment": "plank, ",
+            "xxx": "145, 90"
         },
         {
             "date": "24.06.18",
@@ -66854,7 +68465,16 @@
             "sys": 127,
             "dia": 75,
             "puls": 57,
-            "comment": "yoga, plank, 137, 77"
+            "comment": "yoga, plank, "
+        },
+        {
+            "date": "24.06.19",
+            "time": "06:30",
+            "sys": 137,
+            "dia": 77,
+            "puls": 57,
+            "comment": "yoga, plank, ",
+            "xxx": "137, 77"
         },
         {
             "date": "24.06.19",
@@ -66870,7 +68490,16 @@
             "sys": 116,
             "dia": 74,
             "puls": 62,
-            "comment": "134, 77"
+            "comment": ""
+        },
+        {
+            "date": "24.06.19",
+            "time": "06:32",
+            "sys": 134,
+            "dia": 77,
+            "puls": 62,
+            "comment": "",
+            "xxx": "134, 77"
         },
         {
             "date": "24.06.20",
@@ -66878,7 +68507,16 @@
             "sys": 130,
             "dia": 88,
             "puls": 56,
-            "comment": "146, 87"
+            "comment": ""
+        },
+        {
+            "date": "24.06.20",
+            "time": "05:37",
+            "sys": 146,
+            "dia": 87,
+            "puls": 56,
+            "comment": "",
+            "xxx": "146, 87"
         },
         {
             "date": "24.06.20",
@@ -66886,7 +68524,16 @@
             "sys": 132,
             "dia": 83,
             "puls": 70,
-            "comment": "142, 83"
+            "comment": ""
+        },
+        {
+            "date": "24.06.20",
+            "time": "05:38",
+            "sys": 142,
+            "dia": 83,
+            "puls": 70,
+            "comment": "",
+            "xxx": "142, 83"
         },
         {
             "date": "24.06.20",
@@ -66894,7 +68541,16 @@
             "sys": 135,
             "dia": 86,
             "puls": 65,
-            "comment": "142, 87"
+            "comment": ""
+        },
+        {
+            "date": "24.06.20",
+            "time": "05:39",
+            "sys": 142,
+            "dia": 87,
+            "puls": 65,
+            "comment": "",
+            "xxx": "142, 87"
         },
         {
             "date": "24.06.20",
@@ -66902,7 +68558,16 @@
             "sys": 144,
             "dia": 84,
             "puls": 66,
-            "comment": "rad, see, swim, run, 138, 86"
+            "comment": "rad, see, swim, run, "
+        },
+        {
+            "date": "24.06.20",
+            "time": "20:03",
+            "sys": 138,
+            "dia": 86,
+            "puls": 66,
+            "comment": "rad, see, swim, run, ",
+            "xxx": "138, 86"
         },
         {
             "date": "24.06.20",
@@ -66950,7 +68615,16 @@
             "sys": 130,
             "dia": 83,
             "puls": 61,
-            "comment": "153, 86"
+            "comment": ""
+        },
+        {
+            "date": "24.06.21",
+            "time": "21:08",
+            "sys": 153,
+            "dia": 86,
+            "puls": 61,
+            "comment": "",
+            "xxx": "153, 86"
         },
         {
             "date": "24.06.21",

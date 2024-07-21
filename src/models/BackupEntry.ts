@@ -4,5 +4,5 @@ export interface BackupEntry {
     sys: number;
     dia: number;
     puls: number;
-    comment?: string;
+    comment: string;
 }

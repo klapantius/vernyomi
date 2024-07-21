@@ -7,7 +7,14 @@
 
 <body>
     <button id="start-session" onclick="startSession()">start</button>
+    <div id="session">
+        <h1>New Session</h1>
+        <input type="text" id="session-comment" title="comment" placeholder="any comment?">
+        <button id="save-session" onclick="saveSession()" title="continue to entering measurments">start</button>
+    </div>
+    </div>
     <div id="measurements">
+        <h1>New Measurement</h1>
         <input type="number" id="sys" placeholder="Sys">
         <input type="number" id="dia" placeholder="Dia">
         <input type="number" id="puls" placeholder="puls">
@@ -17,17 +24,25 @@
 
     <script>
         function startSession() {
+            document.getElementById('start-session').disabled = true;
+            document.getElementById('session').style.display = 'block';
+            document.getElementById('measurements').style.display = 'none';
+        }
+        function saveSession() {
             fetch('/start-session', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({})
+                body: JSON.stringify({
+                    comment: document.getElementById('session-comment').value
+                })
             })
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
-                    document.getElementById('start-session').disabled = true;
+                    document.getElementById('session').style.display = 'none';
+                    document.getElementById('measurements').style.display = 'block';
                     localStorage.setItem('sessionId', data.sessionId);
                 })
                 .catch(error => {

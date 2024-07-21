@@ -83,9 +83,11 @@ export class ImportFromJsonService {
         await repository.save(measurement);
     }
 
-    async saveGroupAsSession(group: BackupEntry[]) {
+    async saveGroupAsSession(measurements: BackupEntry[]) {
         const repository = myContainer.get<ISessionRepository>('ISessionRepository');
-        const sessionId = await repository.createSessionAsync(SessionCreationSource.ImportFromBackup);
+        const sessionId = await repository.createSessionAsync(
+            SessionCreationSource.ImportFromBackup,
+            measurements[0].comment);
         return sessionId;
     }
 
