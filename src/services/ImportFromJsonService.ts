@@ -10,7 +10,7 @@ import { SessionCreationSource } from '../models/SessionCreationSource';
 export class ImportFromJsonService {
     public entries: BackupEntry[] = [];
     private grouppedEntries!: BackupEntry[][];
-    private sessionAutoTimeSpan: number; // Time span in minutes to guess which measurments belong to the same session
+    private sessionAutoTimeSpan: number; // Time span in minutes to guess which measurements belong to the same session
 
     constructor(private filePath: string, timeSpan: number) {
         this.sessionAutoTimeSpan = timeSpan;

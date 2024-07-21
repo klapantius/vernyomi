@@ -7,7 +7,7 @@ export class CreateTableTemplates {
         primary key(session_id)
     );`; // no engine specification ==> InnoDB will be applied as default
 
-    public static Measurements = `create table if not exists measurments (
+    public static Measurements = `create table if not exists measurements (
         measurement_id int auto_increment,
         session_id int,
         created_at timestamp default current_timestamp,
