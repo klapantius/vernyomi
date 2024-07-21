@@ -25,7 +25,7 @@ export class Application {
 
         this.app.use(express.static('public'));
         this.app.get('/', (_, res) => {
-            res.sendFile('index.html', { root: 'public' });
+            res.sendFile('index.html', { root: process.cwd() + '/public' });
         });
 
         this.app.post('/start-session', async (_, res) => {
