@@ -1,0 +1,5 @@
+- set focus and default button on page
+- add complete button to complete the session entry
+- move client-side js code to separate file
+- add client tests
+- add error handling against wrong user input
