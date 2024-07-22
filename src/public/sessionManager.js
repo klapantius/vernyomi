@@ -2,6 +2,7 @@ function startSession() {
     document.getElementById('start-session').disabled = true;
     document.getElementById('session').style.display = 'block';
     document.getElementById('measurements').style.display = 'none';
+    document.getElementById('session-comment').focus();
 }
 
 function saveSession() {
@@ -70,6 +71,8 @@ function createInputRow() {
     diaCell.innerHTML = '<input type="number" id="dia" placeholder="Dia">';
     pulsCell.innerHTML = '<input type="number" id="puls" placeholder="puls"><button id="save-measurment" onclick="saveMeasurement()">next</button>';
     // commentCell.innerHTML = '<input type="text" id="comment" placeholder="Comment">';
+
+    document.getElementById('sys').focus();
 }
 
 function freezeLastRow() {
@@ -88,8 +91,18 @@ function freezeLastRow() {
 }
 
 function completeSession() {
-    freezeLastRow();
-    document.getElementById('session').style.display = 'none';
+    freezeLastRow(); // this is not really neccessary
+    
+    // remove all rows except the header
+    const table = document.querySelector('table');
+    while (table.rows.length > 1) {
+        table.deleteRow(1);
+    }
+    
+    // clear the session-comment field too
+    document.getElementById('session-comment').value = '';
+    
+    // disappear the measurement editor and enable the start button again
     document.getElementById('measurements').style.display = 'none';
     document.getElementById('start-session').disabled = false;
 }
