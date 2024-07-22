@@ -48,6 +48,22 @@ export class Application {
             });
         });
 
+        this.app.get('/session-data', async (req, res) => {
+            const limit = parseInt(req.query.limit as string) || 50;
+            const repo = myContainer.get<ISessionRepository>(DITokens.SessionRepository);
+            const sessions = await repo.getSessions(limit);
+            if (sessions) {
+                res.json({
+                    sessions,
+                    message: 'Sessions loaded successfully'
+                });
+            } else {
+                res.status(404).json({
+                    message: 'Sessions not available'
+                });
+            }
+        });
+
         const port = 3000;
         this.server = this.app.listen(port, () => {
             console.log(`Server running on http://localhost:${port}`);

@@ -24,9 +24,27 @@
         </table>
         <button id="complete-session" onclick="completeSession()">complete</button>
     </div>
+    <div id="numerical-visualization">
+        <h1>Rögzített Adatok</h1>
+        <table id="session-data">
+            <thead>
+                <tr>
+                    <th>Session</th>
+                    <th>Sys</th>
+                    <th>Dia</th>
+                    <th>Puls</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add rows dynamically here using JavaScript -->
+            </tbody>
+        </table>
+    </div>
 
     <script src="sessionManager.js"></script>
     <script> document.getElementById('start-session').focus(); </script>
+    <script src="numericalVisualization.js"></script>
+    <script> populateSessionDataTable(); </script>
 </body>
 
 </html>

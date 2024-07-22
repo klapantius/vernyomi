@@ -30,7 +30,8 @@ describe('Application', () => {
             query: jest.fn().mockResolvedValue([])
         };
         sessionRepository = {
-            createSessionAsync: jest.fn().mockResolvedValue(1)
+            createSessionAsync: jest.fn().mockResolvedValue(1),
+            getSessions: jest.fn().mockResolvedValue(null)
         };
         measurementRepository = {
             save: jest.fn().mockResolvedValue(undefined)
