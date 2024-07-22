@@ -28,7 +28,7 @@ function saveSession() {
         });
 }
 
-function saveMeasurement() {
+function storeMeasurementAndContinueWith(next) {
     fetch('/save-measurement', {
         method: 'POST',
         headers: {
@@ -43,11 +43,18 @@ function saveMeasurement() {
         })
     })
         .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            freezeLastRow();
-            createInputRow();
-        })
+        .then(data => next(data))
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function saveMeasurement() {
+    storeMeasurementAndContinueWith(data => {
+        console.log(data);
+        freezeLastRow();
+        createInputRow();
+    })
         .catch(error => {
             console.error('Error:', error);
         });
@@ -87,21 +94,33 @@ function freezeLastRow() {
     lastRow.cells[1].innerHTML = document.getElementById('dia').value;
     lastRow.cells[2].innerHTML = document.getElementById('puls').value;
     // lastRow.cells[3].innerHTML= document.getElementById('comment').value;
-
 }
 
 function completeSession() {
+    if (document.getElementById('sys').value
+        || document.getElementById('dia').value
+        || document.getElementById('puls').value) {
+        storeMeasurementAndContinueWith(data => {
+            console.log(data);
+            clearSession();
+        });
+    }
+    else { clearSession(); }
+
+}
+
+function clearSession() {
     freezeLastRow(); // this is not really neccessary
-    
+
     // remove all rows except the header
     const table = document.querySelector('table');
     while (table.rows.length > 1) {
         table.deleteRow(1);
     }
-    
+
     // clear the session-comment field too
     document.getElementById('session-comment').value = '';
-    
+
     // disappear the measurement editor and enable the start button again
     document.getElementById('measurements').style.display = 'none';
     document.getElementById('start-session').disabled = false;
