@@ -1,0 +1,42 @@
+:root {
+    --defaultColor: #666;
+    --timeStampColor: #888;
+    /* Replace #FF0000 with your desired color value */
+    --rowBackground1: #f9f9f9;
+    --rowBackground2: #f5f5f5;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    color: var(--defaultColor)
+}
+
+.number {
+    text-align: right;
+}
+
+.timestamp {
+    font-size: smaller;
+    font-weight: lighter;
+    color: var(--timeStampColor);
+}
+
+tr {
+    vertical-align: top;
+}
+
+td.bg0 {
+    background-color: var(--rowBackground1);
+}
+
+td.bg1 {
+    background-color: var(--rowBackground2);
+}
+
+td.session-info:hover {
+    background-color: #ccc;
+}
