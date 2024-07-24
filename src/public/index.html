@@ -8,7 +8,7 @@
 
 <body>
     <button id="start-session" onclick="startSession()">start</button>
-    <div id="session" style="display: none;">
+    <!-- <div id="session" style="display: none;">
         <h1>New Session</h1>
         <input type="text" id="session-comment" title="comment" placeholder="any comment?">
         <button id="save-session" onclick="saveSession()" title="continue to entering measurements">start</button>
@@ -20,20 +20,19 @@
                 <th>sys</th>
                 <th>dia</th>
                 <th>puls</th>
-                <!-- <th>comment</th> -->
+                <th>comment</th> // this should be disabled
             </tr>
         </table>
         <button id="complete-session" onclick="completeSession()">complete</button>
-    </div>
+    </div> -->
     <div id="numerical-visualization">
-        <h1>Rögzített Adatok</h1>
         <table id="session-data">
             <thead>
                 <tr>
-                    <th>Session</th>
-                    <th>Sys</th>
-                    <th>Dia</th>
-                    <th>Puls</th>
+                    <th id="session-column">Session</th>
+                    <th class="measurement-column">Sys</th>
+                    <th class="measurement-column">Dia</th>
+                    <th class="measurement-column">Puls</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +41,8 @@
         </table>
     </div>
 
-    <script src="sessionManager.js"></script>
+    <script src="cellBuilder.js"></script>
+    <script src="sessionManager2.js"></script>
     <script> document.getElementById('start-session').focus(); </script>
     <script src="numericalVisualization.js"></script>
     <script> populateSessionDataTable(); </script>

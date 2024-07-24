@@ -62,10 +62,10 @@ function saveMeasurement() {
 
 function createInputRow() {
     // Find the table element
-    const table = document.querySelector('table');
+    const table = document.querySelector('tbody');
 
     // Create a new row
-    const newRow = table.insertRow();
+    const newRow = table.insertRow(0);
 
     // Create cells for each property from the response
     const sysCell = newRow.insertCell();
@@ -84,10 +84,10 @@ function createInputRow() {
 
 function freezeLastRow() {
     // Find the table element
-    const table = document.querySelector('table');
+    const table = document.querySelector('tbody');
 
     // Find last row
-    const lastRow = table.rows[table.rows.length - 1];
+    const lastRow = table.rows[0];
 
     // freeze content: replace the input controls by their values
     lastRow.cells[0].innerHTML = document.getElementById('sys').value;

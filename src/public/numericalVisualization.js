@@ -13,7 +13,6 @@ async function fetchSessionData() {
 }
 
 async function populateSessionDataTable() {
-    const dayNames = ['V', 'H', 'K', 'Sze', 'Cs', 'P', 'Szo'];
     const table = document.getElementById('session-data');
     const tbody = table.getElementsByTagName('tbody')[0]; // Get the tbody element
     const sessions = await fetchSessionData();
@@ -22,10 +21,7 @@ async function populateSessionDataTable() {
     sessions.reverse().forEach(session => {
         const row = tbody.insertRow(0); // Insert a new row at the top of the tbody
         const cell = row.insertCell(0); // Insert the first cell for date/time and comment
-        const date = new Date(session.startedAt);
-        const formattedDate = `${dayNames[date.getDay()]}, ${date.toLocaleString('hu-HU', { year: '2-digit', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' }).replace(/\.\s/g, '.')}`;
-        cell.innerHTML = `<span class='timestamp'>${formattedDate}</span><br><span class='comment'>${session.comment}</span>`;
-        cell.classList.add('session-info', `day${date.getDay()}`, `bg${bgClass++ % 2}`);
+        fillSessionCell(cell, session, bgClass++ % 2);
 
         // Insert the first measurement in the next cell of the same row
         if (session.measurements.length > 0) {
@@ -78,18 +74,7 @@ function selectColorGradientInRange(ratio, lowColorHex, highColorHex) {
 }
 
 function createMeasurementCells(row, measurement) {
-    const sysCell = row.insertCell(-1);
-    sysCell.innerHTML = measurement.sys;
-    sysCell.style.backgroundColor = getColorForValue(measurement.sys, 70, 110, 130, 140, 160);
-    sysCell.classList.add('number');
-
-    const diaCell = row.insertCell(-1);
-    diaCell.innerHTML = measurement.dia;
-    // Optionally, apply color to diaCell as well
-    diaCell.style.backgroundColor = getColorForValue(measurement.dia, 50, 70, 80, 90, 110);
-    diaCell.classList.add('number');
-
-    const pulsCell = row.insertCell(-1);
-    pulsCell.innerHTML = measurement.puls;
-    pulsCell.classList.add('number');
+    createMeasurementCell(row, 'sys', measurement.sys);
+    createMeasurementCell(row, 'dia', measurement.dia);
+    createMeasurementCell(row, 'puls', measurement.puls);
 }
