@@ -13,7 +13,9 @@ function startSession() {
 
     // specify event handlers for enter and esc
     commentInput.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' || event.key === 'Tab') {
+            event.preventDefault();
+            event.stopPropagation();
             storeSession(commentInput.value);
         } else if (event.key === 'Escape') {
             table.removeChild(newRow);
@@ -22,6 +24,8 @@ function startSession() {
 
     // set the focus to the input field
     commentInput.focus();
+
+    window.addEventListener('focusout', stopEditingAndRemoveInputRow);
 }
 
 async function storeSession(comment) {
@@ -55,7 +59,12 @@ async function storeSession(comment) {
     sysInput.focus();
 }
 
-async function saveMeasurementAndContinueInNewRow() {
+async function saveMeasurementAndContinueInNewRow(event) {
+    console.log(`saveMeasurementAndContinueInNewRow - event.key: ${event.key}`);
+    if (!(event.key === 'Enter' || event.key === 'Tab')) { return; }
+    event.preventDefault();
+    event.stopPropagation();
+
     const response = await fetch('/save-measurement', {
         method: 'POST',
         headers: {
@@ -98,14 +107,7 @@ function turnInputToMeasurement(name) {
 function createLastInputCell(row, name) {
     const inputField = createInputCell(row, name);
     // define callback function for enter-pressed event
-    inputField.addEventListener('keydown', async (event) => {
-        if (event.key === 'Enter') {
-            // stop propagating this event
-            event.stopPropagation();
-            await saveMeasurementAndContinueInNewRow();
-        }
-    });
-
+    inputField.addEventListener('keydown', saveMeasurementAndContinueInNewRow, true);
 }
 
 function createInputCell(row, name) {
@@ -115,15 +117,17 @@ function createInputCell(row, name) {
     input.id = name;
     input.placeholder = name;
     cell.appendChild(input);
-    input.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            stopEditingAndRemoveInputRow();
-        }
-    });
+    input.addEventListener('keydown', stopEditingAndRemoveInputRow);
     return input;
 }
 
-function stopEditingAndRemoveInputRow() {
+function stopEditingAndRemoveInputRow(event) {
+    console.log(`stopEditingAndRemoveInputRow - event: ${event.type} ${event.key}`);
+    if (!(
+            (event.type === 'keydown' && event.key === 'Escape')
+         || (event.type === 'focusout' && event.relatedTarget?.tagName !== 'INPUT')
+        )) { return; }
+    console.log('stop editing...');
     const inputRow = getRowOfInputField('sys');
     if (!inputRow) { return; }
     // if inputRow has no sub-element with class 'session-info'
@@ -134,6 +138,9 @@ function stopEditingAndRemoveInputRow() {
     }
     const table = document.querySelector('table');
     table.removeChild(inputRow);
+
+    window.removeEventListener('focusout', stopEditingAndRemoveInputRow);
+    console.log('stop editing is done.')
 }
 
 function getFirstRowOfSession(row) {
