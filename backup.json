@@ -69481,6 +69481,558 @@
             "dia": 78,
             "puls": 68,
             "comment": ""
+        },
+        {
+            "date": "24.07.12",
+            "time": "08:20",
+            "sys": 134,
+            "dia": 88,
+            "puls": 61,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.12",
+            "time": "08:21",
+            "sys": 139,
+            "dia": 90,
+            "puls": 65,
+            "comment": ""
+        },
+        {
+            "date": "24.07.12",
+            "time": "08:22",
+            "sys": 137,
+            "dia": 89,
+            "puls": 73,
+            "comment": ""
+        },
+        {
+            "date": "24.07.12",
+            "time": "20:26",
+            "sys": 135,
+            "dia": 84,
+            "puls": 73,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.12",
+            "time": "20:27",
+            "sys": 141,
+            "dia": 83,
+            "puls": 76,
+            "comment": ""
+        },
+        {
+            "date": "24.07.12",
+            "time": "20:28",
+            "sys": 147,
+            "dia": 81,
+            "puls": 73,
+            "comment": ""
+        },
+        {
+            "date": "24.07.13",
+            "time": "07:29",
+            "sys": 142,
+            "dia": 85,
+            "puls": 76,
+            "comment": "plank , krank"
+        },
+        {
+            "date": "24.07.13",
+            "time": "07:30",
+            "sys": 133,
+            "dia": 84,
+            "puls": 86,
+            "comment": ""
+        },
+        {
+            "date": "24.07.13",
+            "time": "07:31",
+            "sys": 135,
+            "dia": 84,
+            "puls": 77,
+            "comment": ""
+        },
+        {
+            "date": "24.07.13",
+            "time": "20:44",
+            "sys": 145,
+            "dia": 86,
+            "puls": 66,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.13",
+            "time": "20:45",
+            "sys": 139,
+            "dia": 81,
+            "puls": 64,
+            "comment": ""
+        },
+        {
+            "date": "24.07.13",
+            "time": "20:46",
+            "sys": 140,
+            "dia": 81,
+            "puls": 64,
+            "comment": ""
+        },
+        {
+            "date": "24.07.14",
+            "time": "07:53",
+            "sys": 149,
+            "dia": 90,
+            "puls": 74,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.14",
+            "time": "07:54",
+            "sys": 140,
+            "dia": 87,
+            "puls": 70,
+            "comment": ""
+        },
+        {
+            "date": "24.07.14",
+            "time": "07:55",
+            "sys": 142,
+            "dia": 81,
+            "puls": 70,
+            "comment": ""
+        },
+        {
+            "date": "24.07.14",
+            "time": "21:02",
+            "sys": 150,
+            "dia": 89,
+            "puls": 73,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.14",
+            "time": "21:03",
+            "sys": 145,
+            "dia": 85,
+            "puls": 71,
+            "comment": ""
+        },
+        {
+            "date": "24.07.14",
+            "time": "21:04",
+            "sys": 141,
+            "dia": 82,
+            "puls": 70,
+            "comment": ""
+        },
+        {
+            "date": "24.07.15",
+            "time": "07:17",
+            "sys": 140,
+            "dia": 91,
+            "puls": 70,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.15",
+            "time": "07:18",
+            "sys": 144,
+            "dia": 89,
+            "puls": 66,
+            "comment": ""
+        },
+        {
+            "date": "24.07.15",
+            "time": "07:19",
+            "sys": 142,
+            "dia": 87,
+            "puls": 66,
+            "comment": ""
+        },
+        {
+            "date": "24.07.15",
+            "time": "20:17",
+            "sys": 136,
+            "dia": 79,
+            "puls": 76,
+            "comment": "krank, akupunktur "
+        },
+        {
+            "date": "24.07.15",
+            "time": "20:18",
+            "sys": 137,
+            "dia": 82,
+            "puls": 78,
+            "comment": ""
+        },
+        {
+            "date": "24.07.15",
+            "time": "20:19",
+            "sys": 130,
+            "dia": 83,
+            "puls": 81,
+            "comment": ""
+        },
+        {
+            "date": "24.07.16",
+            "time": "09:28",
+            "sys": 150,
+            "dia": 86,
+            "puls": 69,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.16",
+            "time": "09:29",
+            "sys": 131,
+            "dia": 87,
+            "puls": 74,
+            "comment": ""
+        },
+        {
+            "date": "24.07.16",
+            "time": "09:30",
+            "sys": 131,
+            "dia": 83,
+            "puls": 71,
+            "comment": ""
+        },
+        {
+            "date": "24.07.16",
+            "time": "20:41",
+            "sys": 131,
+            "dia": 81,
+            "puls": 70,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.16",
+            "time": "20:42",
+            "sys": 137,
+            "dia": 79,
+            "puls": 65,
+            "comment": ""
+        },
+        {
+            "date": "24.07.16",
+            "time": "20:43",
+            "sys": 131,
+            "dia": 81,
+            "puls": 65,
+            "comment": ""
+        },
+        {
+            "date": "24.07.18",
+            "time": "08:46",
+            "sys": 142,
+            "dia": 87,
+            "puls": 63,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.18",
+            "time": "08:47",
+            "sys": 139,
+            "dia": 91,
+            "puls": 66,
+            "comment": ""
+        },
+        {
+            "date": "24.07.18",
+            "time": "08:48",
+            "sys": 135,
+            "dia": 89,
+            "puls": 65,
+            "comment": ""
+        },
+        {
+            "date": "24.07.18",
+            "time": "20:26",
+            "sys": 140,
+            "dia": 83,
+            "puls": 70,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.18",
+            "time": "20:27",
+            "sys": 128,
+            "dia": 86,
+            "puls": 72,
+            "comment": ""
+        },
+        {
+            "date": "24.07.18",
+            "time": "20:28",
+            "sys": 136,
+            "dia": 84,
+            "puls": 69,
+            "comment": ""
+        },
+        {
+            "date": "24.07.19",
+            "time": "07:48",
+            "sys": 134,
+            "dia": 93,
+            "puls": 63,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.19",
+            "time": "07:49",
+            "sys": 140,
+            "dia": 93,
+            "puls": 60,
+            "comment": ""
+        },
+        {
+            "date": "24.07.19",
+            "time": "07:50",
+            "sys": 142,
+            "dia": 90,
+            "puls": 60,
+            "comment": ""
+        },
+        {
+            "date": "24.07.19",
+            "time": "20:10",
+            "sys": 132,
+            "dia": 85,
+            "puls": 61,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.19",
+            "time": "20:11",
+            "sys": 138,
+            "dia": 80,
+            "puls": 61,
+            "comment": ""
+        },
+        {
+            "date": "24.07.19",
+            "time": "20:12",
+            "sys": 129,
+            "dia": 79,
+            "puls": 62,
+            "comment": ""
+        },
+        {
+            "date": "24.07.20",
+            "time": "07:38",
+            "sys": 132,
+            "dia": 89,
+            "puls": 61,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.20",
+            "time": "07:39",
+            "sys": 140,
+            "dia": 91,
+            "puls": 60,
+            "comment": ""
+        },
+        {
+            "date": "24.07.20",
+            "time": "07:40",
+            "sys": 132,
+            "dia": 86,
+            "puls": 58,
+            "comment": ""
+        },
+        {
+            "date": "24.07.20",
+            "time": "20:16",
+            "sys": 139,
+            "dia": 90,
+            "puls": 61,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.20",
+            "time": "20:17",
+            "sys": 140,
+            "dia": 87,
+            "puls": 61,
+            "comment": ""
+        },
+        {
+            "date": "24.07.20",
+            "time": "20:18",
+            "sys": 138,
+            "dia": 86,
+            "puls": 62,
+            "comment": ""
+        },
+        {
+            "date": "24.07.21",
+            "time": "20:25",
+            "sys": 131,
+            "dia": 86,
+            "puls": 60,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.21",
+            "time": "20:26",
+            "sys": 132,
+            "dia": 83,
+            "puls": 59,
+            "comment": ""
+        },
+        {
+            "date": "24.07.21",
+            "time": "20:27",
+            "sys": 130,
+            "dia": 83,
+            "puls": 60,
+            "comment": ""
+        },
+        {
+            "date": "24.07.22",
+            "time": "07:10",
+            "sys": 139,
+            "dia": 88,
+            "puls": 57,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.22",
+            "time": "07:11",
+            "sys": 135,
+            "dia": 89,
+            "puls": 59,
+            "comment": ""
+        },
+        {
+            "date": "24.07.22",
+            "time": "07:12",
+            "sys": 130,
+            "dia": 90,
+            "puls": 59,
+            "comment": ""
+        },
+        {
+            "date": "24.07.22",
+            "time": "20:00",
+            "sys": 143,
+            "dia": 91,
+            "puls": 64,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.22",
+            "time": "20:01",
+            "sys": 145,
+            "dia": 78,
+            "puls": 63,
+            "comment": ""
+        },
+        {
+            "date": "24.07.22",
+            "time": "20:02",
+            "sys": 131,
+            "dia": 87,
+            "puls": 63,
+            "comment": ""
+        },
+        {
+            "date": "24.07.23",
+            "time": "07:01",
+            "sys": 146,
+            "dia": 94,
+            "puls": 59,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.23",
+            "time": "07:02",
+            "sys": 142,
+            "dia": 86,
+            "puls": 56,
+            "comment": ""
+        },
+        {
+            "date": "24.07.23",
+            "time": "07:03",
+            "sys": 143,
+            "dia": 86,
+            "puls": 57,
+            "comment": ""
+        },
+        {
+            "date": "24.07.24",
+            "time": "06:26",
+            "sys": 149,
+            "dia": 92,
+            "puls": 55,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.24",
+            "time": "06:27",
+            "sys": 138,
+            "dia": 88,
+            "puls": 52,
+            "comment": ""
+        },
+        {
+            "date": "24.07.24",
+            "time": "06:28",
+            "sys": 138,
+            "dia": 84,
+            "puls": 54,
+            "comment": ""
+        },
+        {
+            "date": "24.07.24",
+            "time": "20:04",
+            "sys": 146,
+            "dia": 86,
+            "puls": 61,
+            "comment": "krank"
+        },
+        {
+            "date": "24.07.24",
+            "time": "20:05",
+            "sys": 132,
+            "dia": 87,
+            "puls": 65,
+            "comment": ""
+        },
+        {
+            "date": "24.07.24",
+            "time": "20:06",
+            "sys": 134,
+            "dia": 86,
+            "puls": 61,
+            "comment": ""
+        },
+        {
+            "date": "24.07.25",
+            "time": "06:35",
+            "sys": 143,
+            "dia": 85,
+            "puls": 58,
+            "comment": "plank "
+        },
+        {
+            "date": "24.07.25",
+            "time": "06:36",
+            "sys": 134,
+            "dia": 85,
+            "puls": 57,
+            "comment": ""
+        },
+        {
+            "date": "24.07.25",
+            "time": "06:37",
+            "sys": 142,
+            "dia": 89,
+            "puls": 59,
+            "comment": ""
         }
     ]
 }
