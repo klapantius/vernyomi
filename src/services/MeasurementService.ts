@@ -10,7 +10,7 @@ export class MeasurementService {
     }
 
     async saveMeasurement(measurementData: any): Promise<{ message: string }> {
-        await this.repo.save(new Measurement(measurementData));
+        await this.repo.create(new Measurement(measurementData));
         return { message: 'Measurement saved successfully' };
     }
 }

@@ -34,7 +34,7 @@ describe('Application', () => {
             getSessions: jest.fn().mockResolvedValue(null)
         };
         measurementRepository = {
-            save: jest.fn().mockResolvedValue(undefined)
+            create: jest.fn().mockResolvedValue(undefined)
         };
         myContainer.unbind(DITokens.DatabaseService);
         myContainer.bind<IDatabase>(DITokens.DatabaseService).toConstantValue(database);
@@ -78,7 +78,7 @@ describe('Application', () => {
         expect(saveMeasurementResponse.body).toEqual({
             message: 'Measurement saved successfully'
         });
-        expect(measurementRepository.save).toHaveBeenCalledWith({
+        expect(measurementRepository.create).toHaveBeenCalledWith({
             sessionId: 42,
             measurementId: null,
             createdAt: expect.any(Date),

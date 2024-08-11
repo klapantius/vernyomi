@@ -10,7 +10,7 @@ export class MeasurementRepository {
         @inject(DITokens.DatabaseService) private db: IDatabase
     ) { }
 
-    async save(measurement: Measurement): Promise<number> {
+    async create(measurement: Measurement): Promise<number> {
         const dbResult = await this.db.query(
             'INSERT INTO measurements (session_id, sys, dia, puls) VALUES (?, ?, ?, ?)',
              [measurement.sessionId, measurement.sys, measurement.dia, measurement.puls]);

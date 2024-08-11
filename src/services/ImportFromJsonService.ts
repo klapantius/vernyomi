@@ -87,7 +87,7 @@ export class ImportFromJsonService {
             // comment: entry.comment,
         });
         const repository = myContainer.get<IMeasurementRepository>(DITokens.MeasurementRepository);
-        await repository.save(measurement);
+        await repository.create(measurement);
     }
 
     async saveGroupAsSession(measurements: BackupEntry[]) {

@@ -22,7 +22,7 @@ describe('ImportFromJsonService', () => {
             })
         };
         mockMeasurementRepository = {
-            save: jest.fn().mockResolvedValue(undefined)
+            create: jest.fn().mockResolvedValue(undefined)
         };
         myContainer.unbind(DITokens.MeasurementRepository);
         myContainer.bind<IMeasurementRepository>(DITokens.MeasurementRepository).toConstantValue(mockMeasurementRepository as IMeasurementRepository);
@@ -82,7 +82,7 @@ describe('ImportFromJsonService', () => {
 
         await service.saveEntryWithSessionId(entry, sessionId);
 
-        expect(mockMeasurementRepository.save).toHaveBeenCalledWith(expect.objectContaining({
+        expect(mockMeasurementRepository.create).toHaveBeenCalledWith(expect.objectContaining({
             measurementId: null,
             sessionId: sessionId,
             createdAt: new Date('2023-11-22T01:02:00.000Z'),
