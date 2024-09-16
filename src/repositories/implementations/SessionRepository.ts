@@ -33,12 +33,12 @@ export class SessionRepository implements ISessionRepository {
         for (const session of dbResult) {
             const measurements = await this.db.query('SELECT * FROM measurements WHERE session_id = ?', [session.session_id]);
             sessions.push(new ComplexSession(
-                session.id,
+                session.session_id,
                 new Date(session.started_at),
                 session.comment,
                 session.creationSource,
                 measurements.map((m: any) => new Measurement({
-                    measurementId: m.id,
+                    measurementId: m.measurement_id,
                     sessionId: m.session_id,
                     createdAt: m.timestamp,
                     sys: m.sys,

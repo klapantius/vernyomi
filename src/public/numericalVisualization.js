@@ -19,21 +19,29 @@ async function populateSessionDataTable() {
     let bgClass = 0;
 
     sessions.reverse().forEach(session => {
-        const row = tbody.insertRow(0); // Insert a new row at the top of the tbody
-        const cell = row.insertCell(0); // Insert the first cell for date/time and comment
+        const firstRow = tbody.insertRow(0); // Insert a new row at the top of the tbody
+        // store the session id as an attribute of the row
+        firstRow.setAttribute('data-session-id', session.sessionId);
+
+        const cell = firstRow.insertCell(0); // Insert the first cell for date/time and comment
         fillSessionCell(cell, session, bgClass++ % 2);
 
         // Insert the first measurement in the next cell of the same row
         if (session.measurements.length > 0) {
             cell.rowSpan = session.measurements.length;
-            createMeasurementCells(row, session.measurements[0]);
+            firstRow.setAttribute('data-measurement-id', session.measurements[0].measurementId);
+            createMeasurementCells(firstRow, session.measurements[0]);
         }
         // Insert additional rows for remaining measurements
         session.measurements.slice(1).reverse().forEach(measurement => {
-            const measurementRow = tbody.insertRow(row.rowIndex); // Insert a new row for each additional measurement
+            const measurementRow = tbody.insertRow(firstRow.rowIndex); // Insert a new row for each additional measurement
+            // store the measurement id as an attribute of the row
+            measurementRow.setAttribute('data-measurement-id', measurement.measurementId);
             createMeasurementCells(measurementRow, measurement);
         });
     });
+
+    window.addEventListener('dblclick', handleDoubleClick);
 }
 
 function getColorForValue(value, foo, lowThreshold, idealValue, highThreshold, bar) {

@@ -13,4 +13,14 @@ export class MeasurementService {
         await this.repo.create(new Measurement(measurementData));
         return { message: 'Measurement saved successfully' };
     }
+
+    async updateMeasurement(measurementData: any): Promise<{ message: string }> {
+        await this.repo.update(new Measurement(measurementData));
+        return { message: 'Measurement updated successfully' };
+    }
+
+    async deleteMeasurement(measurementId: number): Promise<{ message: string }> {
+        await this.repo.delete(measurementId);
+        return { message: 'Measurement deleted successfully' };
+    }
 }

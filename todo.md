@@ -1,4 +1,5 @@
 # ToDo
+- make it server-rendered(?)
 - enable subsequent data correction
 - deploy script
 - refresh list after completing a new session

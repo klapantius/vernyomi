@@ -34,7 +34,9 @@ describe('Application', () => {
             getSessions: jest.fn().mockResolvedValue(null)
         };
         measurementRepository = {
-            create: jest.fn().mockResolvedValue(undefined)
+            create: jest.fn().mockResolvedValue(undefined),
+            update: jest.fn().mockResolvedValue(undefined),
+            delete: jest.fn().mockResolvedValue(undefined)
         };
         myContainer.unbind(DITokens.DatabaseService);
         myContainer.bind<IDatabase>(DITokens.DatabaseService).toConstantValue(database);

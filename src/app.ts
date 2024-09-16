@@ -39,12 +39,30 @@ export class Application {
             });
         });
 
-        this.app.post('/save-measurement', async (req, res) => {
+        this.app.post('/measurement', async (req, res) => {
             const repo = myContainer.get<IMeasurementRepository>(DITokens.MeasurementRepository);
             const measurementService = new MeasurementService(repo);
             await measurementService.saveMeasurement(req.body);
             res.json({
                 message: 'Measurement saved successfully'
+            });
+        });
+
+        this.app.put('/measurement', async (req, res) => {
+            const repo = myContainer.get<IMeasurementRepository>(DITokens.MeasurementRepository);
+            const measurementService = new MeasurementService(repo);
+            await measurementService.updateMeasurement(req.body);
+            res.json({
+                message: 'Measurement updated successfully'
+            });
+        });
+        
+        this.app.delete('/measurement', async (req, res) => {
+            const repo = myContainer.get<IMeasurementRepository>(DITokens.MeasurementRepository);
+            const measurementService = new MeasurementService(repo);
+            await measurementService.deleteMeasurement(req.body);
+            res.json({
+                message: 'Measurement deleted successfully'
             });
         });
 
