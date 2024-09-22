@@ -42,7 +42,24 @@ async function populateSessionDataTable() {
     });
 
     window.addEventListener('dblclick', handleDoubleClick);
-}
+
+    let lastTap = 0;
+
+    window.addEventListener('touchstart', function(event) {
+        if (event.touches.length > 1) { return; } // Ignore multi-touch
+        const currentTime = new Date().getTime();
+        const tapLength = currentTime - lastTap;
+        if (tapLength < 500 && tapLength > 0) {
+            event.preventDefault();
+            handleDoubleClick(event);
+        }    
+        lastTap = currentTime;
+    });
+    window.addEventListener('touchend', function(event) {
+        if (event.touches.length > 1) { return; } // Ignore multi-touch
+        event.preventDefault();
+    }); 
+}    
 
 function getColorForValue(value, foo, lowThreshold, idealValue, highThreshold, bar) {
     // Calculate ratio between 0 and 1

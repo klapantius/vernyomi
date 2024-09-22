@@ -11,21 +11,29 @@ function startSession() {
     commentInput.placeholder = 'megjegyzések - ha kész: enter';
     newRow.insertCell().appendChild(commentInput);
 
-    // specify event handlers for enter and esc
-    commentInput.addEventListener('keydown', (event) => {
+    // define the event handler
+    const handleKeydown = (event) => {
         if (event.key === 'Enter' || event.key === 'Tab') {
             event.preventDefault();
             event.stopPropagation();
+            commentInput.removeEventListener('keydown', handleKeydown);
             storeSession(commentInput.value);
         } else if (event.key === 'Escape') {
+            commentInput.removeEventListener('keydown', handleKeydown);
             table.removeChild(newRow);
         }
-    });
+    };
+
+    // specify event handlers for enter, tab and esc
+    commentInput.addEventListener('keydown', handleKeydown);
+
+    // we could specify and event handler for focusout ==> stop editing and remove input row
+    // commentInput.addEventListener('focusout', () => { table.removeChild(newRow); });
+    // However, skipping this makes possible copying content from another field or switching
+    // to another browser tab or window without losing the entered data
 
     // set the focus to the input field
     commentInput.focus();
-
-    window.addEventListener('focusout', stopEditingAndRemoveInputRow);
 }
 
 function handleDoubleClick(event) {
@@ -33,7 +41,7 @@ function handleDoubleClick(event) {
     if (document.querySelector('input')) { return; }
     // dblclick on a measurement cell triggers editing
     if (event.target.classList.contains('number')) {
-        turnMeasurementToInput(event.target);
+        turnMeasurementToInputForUpdate(event.target);
         return;
     }
 }
@@ -71,31 +79,52 @@ async function storeSession(comment) {
     // replace the input field with the session information
     sessionCell.removeChild(document.getElementById('session-comment'));
     fillSessionCell(sessionCell, session, bgClass);
-    // create input fields for the first measurement in the next cells of the same row
-    const sysInput = createInputCell(row, 'sys');
-    createInputCell(row, 'dia');
-    createLastInputCell(row, 'puls');
+
+    createMeasurementInputs(row);
+
+}
+
+function createMeasurementInputs(row) {
+    // create input fields for the first measurement in the next Inputs of the same row
+    const sysInput = createInputCell({
+        row: row,
+        name: 'sys',
+        eventListeners: [
+            { event: 'keydown', callback: handleKeyDownInMeasurementFieldWhileEnteringData }
+        ]
+    });
+    createInputCell({
+        row: row,
+        name: 'dia',
+        eventListeners: [
+            { event: 'keydown', callback: handleKeyDownInMeasurementFieldWhileEnteringData }
+        ]
+    });
+    createInputCell({
+        row: row,
+        name: 'puls',
+        eventListeners: [
+            // todo: implement a different event handler for puls which saves the measurements and creates a new row
+            { event: 'keydown', callback: handleKeyDownInMeasurementFieldWhileEnteringData }
+        ]
+    });
     // set focus to the input field for sys
     sysInput.focus();
 }
 
-async function saveMeasurementAndContinueInNewRow(event) {
-    console.log(`saveMeasurementAndContinueInNewRow - event.key: ${event.key}`);
-    if (!(event.key === 'Enter' || event.key === 'Tab')) { return; }
-    event.preventDefault();
-    event.stopPropagation();
-
+async function saveMeasurementsAndContinueInNewRow(event) {
     const measurementId = await saveMeasurements();
+
     // store the measurement id in the row as an attribute
-    const inputRow = getRowOfInputField('sys');
+    const inputRow = getRowOfInputField(event.target.id);
     inputRow.setAttribute('data-measurement-id', measurementId);
 
-    continueEnteringDataInNewRow();
+    continueEnteringDataInNewRow(event);
 }
 
-function continueEnteringDataInNewRow() {
+function continueEnteringDataInNewRow(event) {
     // notice the old input row
-    var oldInputRow = getRowOfInputField('sys');
+    var oldInputRow = getRowOfInputField(event.target.id);
     // find rows with input fields and replace them with the values
     turnInputToMeasurement('sys');
     turnInputToMeasurement('dia');
@@ -108,13 +137,20 @@ function continueEnteringDataInNewRow() {
     // increase the row span of the session info cell in the first row of the session
     const sessionFirstRow = getFirstRowOfSession(newRow);
     ++sessionFirstRow.cells[0].rowSpan;
-    const sysInput = createInputCell(newRow, 'sys');
-    createInputCell(newRow, 'dia');
-    createLastInputCell(newRow, 'puls');
-    sysInput.focus();
+
+    createMeasurementInputs(newRow);
+}
+
+function getMeasurementFromInputField(inputId) {
+    const value = document.getElementById(inputId).value;
+    if (value === '' || isNaN(value)) {
+        throw new Error(`Invalid value: ${value}`);
+    }
+    return value;
 }
 
 async function saveMeasurements() {
+    const [sys, dia, puls] = ['sys', 'dia', 'puls'].map(getMeasurementFromInputField);
     const response = await fetch('/measurement', {
         method: 'POST',
         headers: {
@@ -122,9 +158,9 @@ async function saveMeasurements() {
         },
         body: JSON.stringify({
             sessionId: localStorage.getItem('sessionId'),
-            sys: document.getElementById('sys').value,
-            dia: document.getElementById('dia').value,
-            puls: document.getElementById('puls').value,
+            sys: sys,
+            dia: dia,
+            puls: puls,
             comment: document.getElementById('comment')?.value ?? ""
         })
     });
@@ -164,22 +200,24 @@ function turnInputToMeasurement(name) {
     createMeasurementCell(cell, name, value);
 }
 
-function turnMeasurementToInput(cell) {
+function turnMeasurementToInputForUpdate(cell) {
     if (cell === undefined) { return; }
     const name = getNameFromClasses(cell.classList);
     const value = cell.innerHTML;
     const row = cell.parentElement;
     const idx = Array.from(row.cells).indexOf(cell);
     row.deleteCell(idx);
-    const input = createInputCell({row: row, idx: idx, name: name, eventListeners: [
-        {
-            event: 'keydown', callback: handleKeyDownForMeasurementInput
-        }]});
+    const input = createInputCell({
+        row: row, idx: idx, name: name, eventListeners: [
+            {
+                event: 'keydown', callback: handleKeyDownForWhileUpdatingMeasurement
+            }]
+    });
     input.value = value;
     input.focus();
 }
 
-function handleKeyDownForMeasurementInput(event) {
+function handleKeyDownForWhileUpdatingMeasurement(event) {
     if (event.key === 'Enter' || event.key === 'Tab') {
         event.preventDefault();
         event.stopPropagation();
@@ -188,6 +226,8 @@ function handleKeyDownForMeasurementInput(event) {
             const inputField = event.target;
             // todo: throw exception if inputField is undefined
             // todo: handle error when inputField is not an input element
+            // to be on the safe side, remove the event listener
+            inputField.removeEventListener('keydown', handleKeyDownForWhileUpdatingMeasurement);
             turnInputToMeasurement(inputField.id);
         });
     }
@@ -211,11 +251,39 @@ function getMeasurementValueFromRow(row, name) {
 }
 
 function createLastInputCell(row, name) {
-    createInputCell(row, name, [
-        // { event: 'focusout', callback: stopEditingAndRemoveInputRow }, // focusout is already registered at window level
-        // define callback function for enter-pressed event
-        { event: 'keydown', callback: saveMeasurementAndContinueInNewRow }]
-    );
+    createInputCell({
+        row: row,
+        name: name,
+        eventListeners: [
+            // { event: 'focusout', callback: stopEditingAndRemoveInputRow }, // focusout is already registered at window level
+            // define callback function for enter-pressed event
+            { event: 'keydown', callback: saveMeasurementsAndContinueInNewRow }]
+    });
+}
+
+function handleKeyDownInMeasurementFieldWhileEnteringData(event) {
+    console.log(`handleKeyDownInMeasurementFieldWhileEnteringData - event.key: ${event.key}`);
+    let reacted = false;
+    switch (event.key) {
+        case 'Enter':
+        case 'Tab':
+            const nextInput = event.target.parentElement.nextElementSibling?.querySelector('input');
+            if (event.target.id !== 'puls') {
+                nextInput.focus();
+            } else {
+                saveMeasurementsAndContinueInNewRow(event);
+            }
+            reacted = true;
+            break;
+        case 'Escape':
+            reacted = true;
+            stopEditingAndRemoveInputRow(event);
+            break;
+    }
+    if (reacted) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
 }
 
 function createInputCell(row, name, eventListeners) {
@@ -223,15 +291,15 @@ function createInputCell(row, name, eventListeners) {
 }
 
 function createInputCell(options = { row: undefined, idx: -1, name: 'n/a', eventListeners: [] }) {
-    const { row, idx, name, eventListeners } = options;
+    let { row, idx, name, eventListeners } = options;
     if (row === undefined) { throw new Error('row is not defined'); }
     if (name === undefined) { throw new Error('name is not defined'); }
     if (idx === undefined) { idx = -1; }
-    if (eventListeners === undefined) { // default value for backward compatibility 
-        eventListeners = {
+    if (!eventListeners || eventListeners.length === 0) { // default value for backward compatibility 
+        eventListeners = [{
             event: 'keydown',
             callback: stopEditingAndRemoveInputRow
-        }
+        }]
     }
     const cell = row.insertCell(idx);
     const input = document.createElement('input');
@@ -242,24 +310,26 @@ function createInputCell(options = { row: undefined, idx: -1, name: 'n/a', event
     eventListeners.forEach((listener) => {
         input.addEventListener(listener.event, listener.callback);
     });
-    input.addEventListener('keydown', stopEditingAndRemoveInputRow);
     return input;
 }
 
 function stopEditingAndRemoveInputRow(event) {
     console.log(`stopEditingAndRemoveInputRow - event: ${event.type}; key: ${event.key}; target: ${event.target?.id}`);
-    // stop reacting to the event if it is not... 
-    if (!(
-        // an escape key press
-        (event.type === 'keydown' && event.key === 'Escape')
-        // or a focusout event...
-        || (event.type === 'focusout'
-            && (
-                // while leaving something else than an input field
-                (event.relatedTarget && event.relatedTarget.tagName !== 'INPUT')
-                // or while leaving the input field of the session comment
-                || (event.target?.id === 'session-comment')))
-    )) { return; }
+    const executionFilters = [
+        { fName: 'EscPressed', check: (event) => event.type === 'keydown' && event.key === 'Escape' },
+        { fName: 'ContinueInNextInput', check: (event) => event.type === 'focusout' && event.relatedTarget && event.relatedTarget.tagName !== 'INPUT' },
+        //{ fName: 'LeavingSessionComment', check: (event) => event.type === 'focusout' && event.target?.id === 'session-comment' },
+    ];
+    const filterResults = executionFilters.map((filter) => ({ fName: filter.fName, result: filter.check(event) }));
+    if (!filterResults.some((check) => check.result === true)) {
+        console.log('skip stopEditingAndRemoveInputRow');
+        return;
+    }
+    // log the name of the first filter that returned true
+    console.log(`'${filterResults.find((check) => check.result === true).fName}' event detected.`);
+    const filteringResult = executionFilters.find((filter) => filter.check(event));
+    console.log(`stopEditingAndRemoveInputRow detects '${filteringResult.fName}' event`);
+
     console.log('stop editing...');
     const inputRow = getRowOfInputField('sys');
     if (!inputRow) { return; }
