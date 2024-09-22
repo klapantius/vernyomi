@@ -21,7 +21,7 @@ or you have to configure the above properties as environment variables before st
 ### build and run the application
 
 
-(It is possible to keep two sets of the above parameters as "test" and "production" properties. In this case the settings for "properties" are the default, and those of "test" will be taken if the environment variable NODE_ENV is set to 'test'.)
+(It is possible to keep two sets of the above parameters as "test" and "production" properties. In this case the settings for "properties" are the default, and those of "test" will be taken if the environment variable NODE_ENV is set to 'test' (`export NODE_ENV=test`).)
 
 Build the application:
 
@@ -35,6 +35,7 @@ then start with **one** of the following commands
 
 ```bash
 > npm run run &
+or
 > cd src & npx ts-node index.ts
 ```
 
