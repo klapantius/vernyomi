@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && copyfiles -u 1 src/public/**/* src/connection.cfg built",
+    "build": "tsc && copyfiles -V src/public/**/* src/connection.cfg built",
     "test": "jest",
     "test-openHandles": "jest --detectOpenHandles",
-    "run": "copyfiles connection.cfg built/src && cd built/src && node index.js"
+    "run": "cd built/src && node index.js"
   },
   "author": "",
   "license": "ISC",
