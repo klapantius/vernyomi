@@ -47,6 +47,8 @@ async function populateSessionDataTable() {
 
     window.addEventListener('touchstart', function(event) {
         if (event.touches.length > 1) { return; } // Ignore multi-touch
+        // skip if the event comes from elsewhere than a table cell
+        if (!event.target?.classlist?.contains('number')) { return; }
         const currentTime = new Date().getTime();
         const tapLength = currentTime - lastTap;
         if (tapLength < 500 && tapLength > 0) {
@@ -57,6 +59,7 @@ async function populateSessionDataTable() {
     });
     window.addEventListener('touchend', function(event) {
         if (event.touches.length > 1) { return; } // Ignore multi-touch
+        if (!event.target?.classlist?.contains('number')) { return; } // must be a measurement cell
         event.preventDefault();
     }); 
 }    
